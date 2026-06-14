@@ -10,7 +10,7 @@ import { AutonomousDecisionCenter } from './components/AutonomousDecisionCenter'
 import { PRCenter } from './components/PRCenter';
 import type { AgentState, Issue, SystemCapabilities } from './types';
 
-const API_BASE = 'http://localhost:8000/api/v1';
+const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
 
 const App: React.FC = () => {
   const [issues, setIssues] = useState<Issue[]>([]);
@@ -84,7 +84,8 @@ const App: React.FC = () => {
       // Ah, I need to call /api/reset-demo because I put it in the compat_router.
       // Let's use the v1 if it's there or keep it as API_BASE/../api/reset-demo.
       // Let's fix main.py so reset-demo is in v1 too. Actually, I will just call /api/reset-demo for now.
-      const res = await fetch(`http://localhost:8000/api/reset-demo`, { method: 'POST' });
+      const baseUrl = import.meta.env.VITE_API_URL ? import.meta.env.VITE_API_URL.replace('/v1', '') : 'http://localhost:8000/api';
+      const res = await fetch(`${baseUrl}/reset-demo`, { method: 'POST' });
       if (res.ok) {
         // Reset local runner states
         setState({
