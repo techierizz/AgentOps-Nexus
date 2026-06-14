@@ -184,15 +184,16 @@ class AgentOrchestrator:
         bugs = []
         basic_error_type = legacy_payload.get("rca_report", {}).get("error_type", "Unknown")
         if basic_error_type != "Unknown":
-            bugs.append({"type": basic_error_type, "description": "Deterministic parser finding", "severity": "MEDIUM"})
+            bugs.append({"issue_type": basic_error_type, "title": None, "description": None, "severity": "MEDIUM"})
             
         ai_findings = semantic_decision.payload.get("ai_findings", [])
         for f in ai_findings:
             bugs.append({
-                "type": f.get("severity", "MEDIUM") + " Risk",
-                "description": f.get("explanation", "AI detected issue"),
+                "issue_type": f.get("severity", "UNKNOWN"),
+                "title": f.get("type", None),
+                "description": f.get("explanation", None),
                 "suggested_fix": f.get("suggested_fix", ""),
-                "path": f.get("path", "")
+                "file": f.get("path", "")
             })
             if f.get("path") and f.get("path") not in files:
                 files.append(f.get("path"))

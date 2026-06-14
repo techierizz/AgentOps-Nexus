@@ -138,7 +138,7 @@ const App: React.FC = () => {
           timestamp: new Date().toISOString(),
           level: 'error',
           agent: 'IssueAgent',
-          message: `Found Issue: [${b.error_type}] ${b.description}`
+          message: `Found Issue: [${b.issue_type ?? "UNKNOWN"}] ${b.title ?? "Untitled Issue"} - ${b.description ?? "No description provided"}`
         })) || [];
 
         setState(prev => ({
@@ -240,7 +240,7 @@ const App: React.FC = () => {
         timestamp: new Date().toISOString(),
         level: 'error',
         agent: 'IssueAgent',
-        message: `Found Issue: [${b.error_type}] ${b.description}`
+        message: `Found Issue: [${b.issue_type ?? "UNKNOWN"}] ${b.title ?? "Untitled Issue"} - ${b.description ?? "No description provided"}`
       })) || [];
 
       // Update UI with newly structured data

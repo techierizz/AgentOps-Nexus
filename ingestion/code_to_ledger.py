@@ -55,20 +55,22 @@ def convert_project_to_ledger(artifact: ProjectArtifact, evidence_dir: str):
                         artifacts.write({
                             "event_type": "POTENTIAL_BUG_DETECTED",
                             "payload": {
-                                "path": file_info["path"],
-                                "line": i + 1,
-                                "risk": "ZeroDivisionRisk",
-                                "snippet": line.strip()
+                                "issue_type": "POTENTIAL_BUG_DETECTED",
+                                "title": "ZeroDivisionRisk",
+                                "description": "Static analysis detected a potential division by zero risk",
+                                "file": file_info["path"],
+                                "line": i + 1
                             }
                         })
                     if "except" in line and "pass" in "".join(lines[i:i+2]):
                         artifacts.write({
                             "event_type": "POTENTIAL_BUG_DETECTED",
                             "payload": {
-                                "path": file_info["path"],
-                                "line": i + 1,
-                                "risk": "SilentFailure",
-                                "snippet": line.strip()
+                                "issue_type": "POTENTIAL_BUG_DETECTED",
+                                "title": "SilentFailure",
+                                "description": "Static analysis detected an empty exception handler (pass)",
+                                "file": file_info["path"],
+                                "line": i + 1
                             }
                         })
 
