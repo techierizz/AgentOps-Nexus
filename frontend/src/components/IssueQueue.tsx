@@ -99,18 +99,20 @@ export const IssueQueue: React.FC<IssueQueueProps> = ({
 
       {selectedIssueId && (
         <motion.button
-          whileHover={status !== 'running' ? { scale: 1.02 } : {}}
-          whileTap={status !== 'running' ? { scale: 0.98 } : {}}
+          whileHover={status !== 'running' && !(status === 'completed' && selectedIssueId.startsWith("upload_")) ? { scale: 1.02 } : {}}
+          whileTap={status !== 'running' && !(status === 'completed' && selectedIssueId.startsWith("upload_")) ? { scale: 0.98 } : {}}
           onClick={() => onRunAgent(selectedIssueId)}
-          disabled={status === 'running'}
+          disabled={status === 'running' || (status === 'completed' && selectedIssueId.startsWith("upload_"))}
           className={`mt-4 w-full flex items-center justify-center gap-2 py-2.5 px-4 text-xs font-semibold tracking-wider font-mono rounded-lg transition-colors ${
-            status === 'running'
+            status === 'running' || (status === 'completed' && selectedIssueId.startsWith("upload_"))
               ? 'bg-purple-950/40 text-purple-400 border border-purple-900 cursor-not-allowed'
               : 'bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white shadow-lg shadow-purple-500/10'
           }`}
         >
           <Play className="w-3.5 h-3.5 fill-current" />
-          {selectedIssueId.startsWith("upload_") ? "RUN STATIC ANALYSIS" : "DEPLOY AGENTS"}
+          {selectedIssueId.startsWith("upload_") 
+            ? (status === 'completed' ? "STATIC ANALYSIS COMPLETE" : "RUN STATIC ANALYSIS") 
+            : "DEPLOY AGENTS"}
         </motion.button>
       )}
     </div>
