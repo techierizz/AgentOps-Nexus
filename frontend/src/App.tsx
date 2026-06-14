@@ -134,6 +134,13 @@ const App: React.FC = () => {
         }
 
         const analyzeData = await analyzeRes.json();
+        const bugLogs = analyzeData.bugs?.map((b: any) => ({
+          timestamp: new Date().toISOString(),
+          level: 'error',
+          agent: 'IssueAgent',
+          message: `Found Issue: [${b.error_type}] ${b.description}`
+        })) || [];
+
         setState(prev => ({
           ...prev,
           status: 'completed',
@@ -144,7 +151,8 @@ const App: React.FC = () => {
           },
           logs: [
             ...prev.logs,
-            { timestamp: new Date().toISOString(), level: 'info', agent: 'System', message: `Re-analysis complete. Found ${analyzeData.bugs.length} potential issues.` }
+            { timestamp: new Date().toISOString(), level: 'info', agent: 'System', message: `Re-analysis complete. Found ${analyzeData.bugs?.length || 0} potential issues.` },
+            ...bugLogs
           ]
         }));
       } catch (e) {
@@ -228,6 +236,13 @@ const App: React.FC = () => {
 
       const analyzeData = await analyzeRes.json();
       
+      const bugLogs = analyzeData.bugs?.map((b: any) => ({
+        timestamp: new Date().toISOString(),
+        level: 'error',
+        agent: 'IssueAgent',
+        message: `Found Issue: [${b.error_type}] ${b.description}`
+      })) || [];
+
       // Update UI with newly structured data
       setState({
         ...state,
@@ -237,7 +252,10 @@ const App: React.FC = () => {
           stack_trace: "", 
           suspected_files: analyzeData.files_affected 
         },
-        logs: [{ timestamp: new Date().toISOString(), level: 'info', agent: 'System', message: `Analysis complete. Found ${analyzeData.bugs.length} potential issues.` }]
+        logs: [
+          { timestamp: new Date().toISOString(), level: 'info', agent: 'System', message: `Analysis complete. Found ${analyzeData.bugs?.length || 0} potential issues.` },
+          ...bugLogs
+        ]
       });
 
     } catch (e) {
