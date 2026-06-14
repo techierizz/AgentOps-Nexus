@@ -1,0 +1,7 @@
+{
+  "issue_id": "ISSUE-900",
+  "title": "Fix something",
+  "description": "desc",
+  "error_type": "Generic Bug",
+  "suspected_files": []
+}

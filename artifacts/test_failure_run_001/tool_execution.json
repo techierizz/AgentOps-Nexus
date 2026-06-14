@@ -1,0 +1,14 @@
+{
+  "event_type": "TOOL_EXECUTION",
+  "tool_name": "pytest",
+  "tool_version": "unknown",
+  "command_hash": "3ea63b96712365189c800581fd78b5c3d6e3eb72e4f51b814b890994408ee886",
+  "full_command_string": "pytest -v test_payment.py -k test_successful_checkout or test_invalid_coupon_type_error",
+  "stdout_hash": "ec2f465c71f85e38637fab60e6224dddd406a39126f0050c191751084a9abf5b",
+  "stderr_hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "exit_code": 1,
+  "environment_hash": "unknown",
+  "container_image_digest": "unknown",
+  "execution_id": "unknown",
+  "timestamp": "2026-06-14T23:05:58.352308"
+}

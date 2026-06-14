@@ -1,0 +1,16 @@
+[17:30:08.300] [INFO] Orchestrator: State transition: LOAD_ISSUE
+[17:30:09.302] [INFO] Phase B Shadow: AgentDecision computed. Hash: 61f1d6c190bfd87cde19759dbbc3b55dd80f5a215bc3ac4d58a32605c3783ab4
+[17:30:09.313] [INFO] Issue Agent: Starting issue parsing and context extraction...
+[17:30:09.313] [INFO] Issue Agent: Parsed issue title: 'title'
+[17:30:09.313] [INFO] Issue Agent: Identified error type: Generic Bug
+[17:30:09.313] [INFO] Issue Agent: No files explicitly mentioned. Repository Intel Agent will do a complete scan.
+[17:30:09.313] [SUCCESS] Issue Agent: Issue parsing complete.
+[17:30:09.323] [INFO] Orchestrator: State transition: INDEX_REPO
+[17:30:10.325] [INFO] Phase B Shadow: AgentDecision computed. Hash: 9a653df813da58d801a6662a716ab1968f5ef577cdd143984a58f5d14219cf3b
+[17:30:10.340] [INFO] Issue Agent: No files explicitly mentioned. Repository Intel Agent will do a complete scan.
+[17:30:10.340] [SUCCESS] Issue Agent: Issue parsing complete.
+[17:30:10.340] [INFO] Repository Intel Agent: Scanning codebase and generating knowledge graph in: repo
+[17:30:10.340] [INFO] Repository Intel Agent: Discovered 0 code entities and 0 relationships.
+[17:30:10.340] [SUCCESS] Repository Intel Agent: Codebase indexing and knowledge graph creation completed.
+[17:30:10.347] [INFO] Orchestrator: State transition: SEARCH_MEMORY
+[17:30:11.352] [INFO] Phase B Shadow: AgentDecision computed. Hash: b3318e293108d477f760c21c7e5a9bfe58c907429cbe66d4ec588327c97dd3ab

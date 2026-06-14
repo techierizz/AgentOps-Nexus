@@ -1,0 +1,77 @@
+[15:45:19.633] [INFO] Issue Agent: Starting issue parsing and context extraction...
+[15:45:19.633] [INFO] Issue Agent: Parsed issue title: 'ZeroDivisionError in calculate_fees() on checkout'
+[15:45:19.633] [INFO] Issue Agent: Identified error type: ZeroDivisionError
+[15:45:19.633] [INFO] Issue Agent: Suspected files mentioned: payment_processor.py
+[15:45:19.633] [SUCCESS] Issue Agent: Issue parsing complete.
+[15:45:20.691] [INFO] Issue Agent: Suspected files mentioned: payment_processor.py
+[15:45:20.691] [SUCCESS] Issue Agent: Issue parsing complete.
+[15:45:20.691] [INFO] Repository Intel Agent: Scanning codebase and generating knowledge graph in: D:\Japan\demo_target_repo
+[15:45:20.691] [INFO] Repository Intel Agent: Discovered 14 code entities and 15 relationships.
+[15:45:20.691] [SUCCESS] Repository Intel Agent: Codebase indexing and knowledge graph creation completed.
+[15:45:21.714] [SUCCESS] Repository Intel Agent: Codebase indexing and knowledge graph creation completed.
+[15:45:21.714] [INFO] Memory Agent: Searching long-term bug memory database...
+[15:45:21.714] [INFO] Memory Agent: Found similar historical bug MEM-NEXUS-101 (Similarity: 100.0%)
+[15:45:21.714] [INFO] Memory Agent: Found similar historical bug MEM-NEXUS-101-FAILED (Similarity: 99.4%)
+[15:45:21.714] [INFO] Memory Agent: Retrieved 2 historical references to aid Root Cause Analysis.
+[15:45:22.719] [INFO] Hypothesis Agent: Running Hypothesis Generator...
+[15:45:22.719] [INFO] Hypothesis Agent: Generated 3 bug hypotheses. Running Hypothesis Ranking...
+[15:45:22.719] [INFO] Hypothesis Agent: Rank 1: H1 - ZeroDivisionError in payment_processor.py during fee calculation due to empty cart (total_items = 0) (Confidence: 95%)
+[15:45:22.719] [INFO] Hypothesis Agent: Rank 2: H2 - ZeroDivisionError in test cases mock framework due to uninitialized order weights (Confidence: 40%)
+[15:45:22.719] [INFO] Hypothesis Agent: Rank 3: H3 - Decimal round-off precision error causing total_items count to cast to 0 (Confidence: 25%)
+[15:45:23.729] [INFO] Hypothesis Agent: Rank 2: H2 - ZeroDivisionError in test cases mock framework due to uninitialized order weights (Confidence: 40%)
+[15:45:23.729] [INFO] Hypothesis Agent: Rank 3: H3 - Decimal round-off precision error causing total_items count to cast to 0 (Confidence: 25%)
+[15:45:23.729] [INFO] Root Cause Agent: Starting Root Cause Validation...
+[15:45:23.729] [INFO] Root Cause Agent: Validating Hypothesis H1 on file payment_processor.py...
+[15:45:23.729] [SUCCESS] Root Cause Agent: RCA validated successfully. Consistency Score: 100%. Evidence Chain locked.
+[15:45:25.880] [SUCCESS] Root Cause Agent: RCA validated successfully. Consistency Score: 100%. Evidence Chain locked.
+[15:45:25.880] [INFO] Patch Agent: Starting Patch Iteration 1/3...
+[15:45:25.880] [INFO] Patch Agent: Generating patch files...
+[15:45:25.880] [INFO] Patch Agent: Applied fix for ZeroDivisionError in calculate_fees().
+[15:45:25.880] [SUCCESS] Patch Agent: Patch applied successfully. Diff computed.
+[15:45:27.901] [INFO] Patch Agent: Applied fix for ZeroDivisionError in calculate_fees().
+[15:45:27.901] [SUCCESS] Patch Agent: Patch applied successfully. Diff computed.
+[15:45:27.901] [INFO] Patch Validation Agent: Starting patch structural validation...
+[15:45:27.901] [INFO] Patch Validation Agent: Syntax check PASSED for payment_processor.py
+[15:45:27.901] [SUCCESS] Patch Validation Agent: Patch Validation Result: SAFE_TO_TEST (Risk Score: 10/100)
+[15:45:28.910] [INFO] Patch Validation Agent: Starting patch structural validation...
+[15:45:28.910] [INFO] Patch Validation Agent: Syntax check PASSED for payment_processor.py
+[15:45:28.910] [SUCCESS] Patch Validation Agent: Patch Validation Result: SAFE_TO_TEST (Risk Score: 10/100)
+[15:45:28.910] [INFO] Security Agent: Running static security scan on proposed patch...
+[15:45:28.910] [SUCCESS] Security Agent: Static security scan completed. No vulnerabilities or secrets detected.
+[15:45:31.890] [INFO] Testing Agent: Targeting test filter for NEXUS-101: 'test_successful_checkout or test_zero_items_division'
+[15:45:31.890] [INFO] Testing Agent: Executing: pytest -v test_payment.py -k test_successful_checkout or test_zero_items_division inside target environment...
+[15:45:31.890] [INFO] Testing Agent: Test execution finished. Exit code: 0
+[15:45:31.890] [SUCCESS] Testing Agent: TESTS PASSED: 2/2 assertions passed successfully.
+[15:45:31.890] [SUCCESS] Testing Agent: Code coverage calculated: 95%
+[15:45:33.270] [SUCCESS] Testing Agent: TESTS PASSED: 2/2 assertions passed successfully.
+[15:45:33.270] [SUCCESS] Testing Agent: Code coverage calculated: 95%
+[15:45:33.270] [SUCCESS] Testing Agent: Tests passed. Committing snapshot.
+[15:45:33.270] [INFO] Confidence Agent: Evaluating patch safety and calculating Confidence Score...
+[15:45:33.270] [SUCCESS] Confidence Agent: CONFIDENCE ASSESSMENT COMPLETED:
+Confidence Score: 100%
+Risk Level: Low
+Merge Safety: High
+Files Modified: 1
+Tests Passed: 2/2
+[15:45:34.283] [SUCCESS] Testing Agent: Tests passed. Committing snapshot.
+[15:45:34.283] [INFO] Confidence Agent: Evaluating patch safety and calculating Confidence Score...
+[15:45:34.283] [SUCCESS] Confidence Agent: CONFIDENCE ASSESSMENT COMPLETED:
+Confidence Score: 100%
+Risk Level: Low
+Merge Safety: High
+Files Modified: 1
+Tests Passed: 2/2
+[15:45:34.283] [INFO] Merge Governor: Evaluating deployment safety criteria and governance rules...
+[15:45:34.283] [SUCCESS] Merge Governor: DECISION: AUTONOMOUS MERGE APPROVED!
+Reason: 100% tests passed, security check passed, and confidence score is above 90% threshold.
+[15:45:36.439] [INFO] Confidence Agent: Evaluating patch safety and calculating Confidence Score...
+[15:45:36.439] [SUCCESS] Confidence Agent: CONFIDENCE ASSESSMENT COMPLETED:
+Confidence Score: 100%
+Risk Level: Low
+Merge Safety: High
+Files Modified: 1
+Tests Passed: 2/2
+[15:45:36.439] [INFO] Merge Governor: Evaluating deployment safety criteria and governance rules...
+[15:45:36.439] [SUCCESS] Merge Governor: DECISION: AUTONOMOUS MERGE APPROVED!
+Reason: 100% tests passed, security check passed, and confidence score is above 90% threshold.
+[15:45:36.439] [SUCCESS] PR Agent: Storing verified engineering experience inside Memory Engine...

@@ -1,0 +1,9 @@
+{
+  "issue_id": "ISSUE-123",
+  "title": "Fix division by zero",
+  "description": "The math.py file crashes with a ```ZeroDivisionError: division by zero``` traceback.",
+  "error_type": "ZeroDivisionError",
+  "suspected_files": [
+    "math.py"
+  ]
+}

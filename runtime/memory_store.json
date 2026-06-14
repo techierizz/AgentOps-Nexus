@@ -1,0 +1,209 @@
+[
+  {
+    "id": "HIST-101",
+    "content": "ZeroDivisionError in discount calculator: total items is zero, throws division by zero.",
+    "metadata": {
+      "issue_title": "ZeroDivisionError in discount calculator",
+      "root_cause": "Division by zero when item count is 0 in discount.py",
+      "patch_summary": "Add safe check if item_count == 0 return 0",
+      "files_changed": [
+        "discount.py"
+      ],
+      "confidence_score": 95
+    }
+  },
+  {
+    "id": "HIST-102",
+    "content": "ImportError in dynamic stripe connector: Stripe module failed to load dynamically.",
+    "metadata": {
+      "issue_title": "ImportError in dynamic stripe connector",
+      "root_cause": "Stripe SDK name mismatch when importing dynamically in stripe_client.py",
+      "patch_summary": "Catch ImportError and fallback to stripe mock or correct string import name",
+      "files_changed": [
+        "stripe_client.py"
+      ],
+      "confidence_score": 88
+    }
+  },
+  {
+    "id": "HIST-103",
+    "content": "TypeError in coupon handler: None value passed when loading discount dictionary.",
+    "metadata": {
+      "issue_title": "TypeError in coupon handler",
+      "root_cause": "Null value passed into dict lookup without default fallback in coupons.py",
+      "patch_summary": "Use .get() with default dictionary values",
+      "files_changed": [
+        "coupons.py"
+      ],
+      "confidence_score": 92
+    }
+  },
+  {
+    "id": "MEM-NEXUS-101",
+    "content": "ZeroDivisionError in calculate_fees() on checkout: When checkout occurs for free promotional items (where total cost and cart items are 0), the system crashes with a ZeroDivisionError. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 15, in test_zero_items_division\n    res = processor.process_order(0.0, 0)\n  File \"payment_processor.py\", line 45, in process_order\n    fee = self.calculate_fees(5.0, items)\n  File \"payment_processor.py\", line 21, in calculate_fees\n    fee_per_item = total_fee / total_items\nZeroDivisionError: division by zero\n```",
+    "metadata": {
+      "issue_title": "ZeroDivisionError in calculate_fees() on checkout",
+      "root_cause": "Division by zero where payment fees are calculated by dividing total transaction fees by total_items without validation.",
+      "patch_summary": "Add safety check: if total_items == 0, set fee_per_item = 0.",
+      "files_changed": [
+        "payment_processor.py"
+      ],
+      "confidence_score": 59
+    }
+  },
+  {
+    "id": "MEM-NEXUS-102",
+    "content": "ImportError loading Stripe connector dynamic module: The checkout page fails to process stripe transactions and test cases fail with an import error. The Stripe module fails to dynamically bind. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 22, in test_stripe_import_loading\n    assert payment_processor.stripe is not None\nAssertionError: assert None is not None\n```\n\nNote: The dynamic import loads `stripe_gateway` but the local file is actually named `stripe_client.py`.",
+    "metadata": {
+      "issue_title": "ImportError loading Stripe connector dynamic module",
+      "root_cause": "TypeError because helper loads a null discount mapping when coupon code is invalid, causing dict access lookup on NoneType.",
+      "patch_summary": "Use safe dict lookup: coupon = self.get_coupon_map(code); discount_val = coupon.get('value', 0) if coupon else 0",
+      "files_changed": [
+        "payment_processor.py"
+      ],
+      "confidence_score": 73
+    }
+  },
+  {
+    "id": "MEM-NEXUS-101-FAILED",
+    "content": "FAILED: ZeroDivisionError in calculate_fees() on checkout - When checkout occurs for free promotional items (where total cost and cart items are 0), the system crashes with a ZeroDivisionError. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 15, in test_zero_items_division\n    res = processor.process_order(0.0, 0)\n  File \"payment_processor.py\", line 45, in process_order\n    fee = self.calculate_fees(5.0, items)\n  File \"payment_processor.py\", line 21, in calculate_fees\n    fee_per_item = total_fee / total_items\nZeroDivisionError: division by zero\n```",
+    "metadata": {
+      "status": "FAILED",
+      "issue_title": "ZeroDivisionError in calculate_fees() on checkout",
+      "attempted_hypotheses": [
+        "ZeroDivisionError in payment_processor.py during fee calculation due to empty cart (total_items = 0)",
+        "ZeroDivisionError in test cases mock framework due to uninitialized order weights",
+        "Decimal round-off precision error causing total_items count to cast to 0"
+      ],
+      "patches_attempted": [
+        "--- a/payment_processor.py\n+++ b/payment_processor.py\n@@ -18,7 +18,7 @@\n         # Bug 1: ZeroDivisionError\n         # When order total is zero (e.g. free product promotions), total_items is 0.\n         # This division throws a ZeroDivisionError.\n-        fee_per_item = total_fee / total_items if total_items > 0 else 0 if total_items > 0 else 0\n+        fee_per_item = total_fee / total_items if total_items > 0 else 0 if total_items > 0 else 0 if total_items > 0 else 0\n         return fee_per_item\n \n     def apply_discount(self, code: str) -> float:\n"
+      ],
+      "reflection_history": "CRASH REASON: Import failed inside target script.\nREMEDIAL SUGGESTION: Verify local files in repository. If Stripe mock module is named stripe_client, import stripe_client instead of stripe_gateway.",
+      "test_failures": "FAILURES ===================================\n_________________________ test_stripe_import_loading __________________________\n\n    def test_stripe_import_loading():\n        # Test that stripe modules load without ImportError crashing runtime\n        import payment_processor\n        # If dynamic import succeeds, Stripe charging should be active\n>       assert payment_processor.stripe is not None\nE       AssertionError: assert None is not None\nE        +  where None = <module 'payment_processor' from 'D:\\\\demo_target_repo\\\\payment_processor.py'>.stripe\n\ntest_payment.py:29: AssertionError\n_______________________ test_invalid_coupon_type_error ________________________\n\n    def test_invalid_coupon_type_error():\n        processor = PaymentProcessor()\n        # Invalid coupon should return 0 discount instead of throwing TypeError\n>       res = processor.process_order(30.0, 1, \"INVALIDCODE\")\n              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\ntest_payment.py:34: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\npayment_processor.py:42: in process_order\n    discount = self.apply_discount(discount_code)\n               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <payment_processor.PaymentProcessor object at 0x00000207FE49D0A0>\ncode = 'INVALIDCODE'\n\n    def apply_discount(self, code: str) -> float:\n        # Bug 3: TypeError\n        # If code is invalid or expired, get_coupon_map returns None.\n        # Accessing ['value'] on None raises a TypeError.\n>       discount_val = self.get_coupon_map(code)['value']\n                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nE       TypeError: 'NoneType' object is not subscriptable\n\npayment_processor.py:28: TypeError\n=========================== short test summary info ===========================\nFAILED test_payment.py::test_stripe_import_loading - AssertionError: assert N...\nFAILED test_payment.py::test_invalid_coupon_type_error - TypeError: 'NoneType...\n========================= 2 failed, 2 passed in 0.18s =========================\n\n",
+      "reason_failed": "Critical unit test assertions failed."
+    }
+  },
+  {
+    "id": "MEM-NEXUS-102-FAILED",
+    "content": "FAILED: ImportError loading Stripe connector dynamic module - The checkout page fails to process stripe transactions and test cases fail with an import error. The Stripe module fails to dynamically bind. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 22, in test_stripe_import_loading\n    assert payment_processor.stripe is not None\nAssertionError: assert None is not None\n```\n\nNote: The dynamic import loads `stripe_gateway` but the local file is actually named `stripe_client.py`.",
+    "metadata": {
+      "status": "FAILED",
+      "issue_title": "ImportError loading Stripe connector dynamic module",
+      "attempted_hypotheses": [
+        "Stripe module failed to import in payment_processor.py because the library name is misspelled or loaded incorrectly",
+        "Missing system-level python dependencies inside environment"
+      ],
+      "patches_attempted": [
+        "--- a/payment_processor.py\n+++ b/payment_processor.py\n@@ -61,3 +61,5 @@\n # Patched with reflection safety wrapper\n \n # Patched with reflection safety wrapper\n+\n+# Patched with reflection safety wrapper\n"
+      ],
+      "reflection_history": "CRASH REASON: Import failed inside target script.\nREMEDIAL SUGGESTION: Verify local files in repository. If Stripe mock module is named stripe_client, import stripe_client instead of stripe_gateway.",
+      "test_failures": "FAILURES ===================================\n_________________________ test_stripe_import_loading __________________________\n\n    def test_stripe_import_loading():\n        # Test that stripe modules load without ImportError crashing runtime\n        import payment_processor\n        # If dynamic import succeeds, Stripe charging should be active\n>       assert payment_processor.stripe is not None\nE       AssertionError: assert None is not None\nE        +  where None = <module 'payment_processor' from 'D:\\\\demo_target_repo\\\\payment_processor.py'>.stripe\n\ntest_payment.py:29: AssertionError\n=========================== short test summary info ===========================\nFAILED test_payment.py::test_stripe_import_loading - AssertionError: assert N...\n================== 1 failed, 1 passed, 2 deselected in 0.18s ==================\n\n",
+      "reason_failed": "Critical unit test assertions failed."
+    }
+  },
+  {
+    "id": "MEM-NEXUS-102-VERIFIED",
+    "content": "VERIFIED: ImportError loading Stripe connector dynamic module - The checkout page fails to process stripe transactions and test cases fail with an import error. The Stripe module fails to dynamically bind. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 22, in test_stripe_import_loading\n    assert payment_processor.stripe is not None\nAssertionError: assert None is not None\n```\n\nNote: The dynamic import loads `stripe_gateway` but the local file is actually named `stripe_client.py`.",
+    "metadata": {
+      "status": "VERIFIED",
+      "issue_title": "ImportError loading Stripe connector dynamic module",
+      "confidence": 100,
+      "tests_passed": "2/2",
+      "patch_summary": "Safe auto-merge complete"
+    }
+  },
+  {
+    "id": "MEM-NEXUS-103-PARTIAL",
+    "content": "PARTIAL: TypeError: 'NoneType' object is not subscriptable on coupon checkout - Applying an invalid discount code causes a crash because the coupon loader returns None. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 28, in test_invalid_coupon_type_error\n    res = processor.process_order(30.0, 1, \"INVALIDCODE\")\n  File \"payment_processor.py\", line 41, in process_order\n    discount = self.apply_discount(discount_code)\n  File \"payment_processor.py\", line 28, in apply_discount\n    discount_val = self.get_coupon_map(code)['value']\nTypeError: 'NoneType' object is not subscriptable\n```",
+    "metadata": {
+      "status": "PARTIAL",
+      "issue_title": "TypeError: 'NoneType' object is not subscriptable on coupon checkout",
+      "confidence": 85,
+      "tests_passed": "2/2",
+      "patch_summary": "Draft PR generated for review"
+    }
+  },
+  {
+    "id": "MEM-NEXUS-101-VERIFIED",
+    "content": "VERIFIED: ZeroDivisionError in calculate_fees() on checkout - When checkout occurs for free promotional items (where total cost and cart items are 0), the system crashes with a ZeroDivisionError. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 15, in test_zero_items_division\n    res = processor.process_order(0.0, 0)\n  File \"payment_processor.py\", line 45, in process_order\n    fee = self.calculate_fees(5.0, items)\n  File \"payment_processor.py\", line 21, in calculate_fees\n    fee_per_item = total_fee / total_items\nZeroDivisionError: division by zero\n```",
+    "metadata": {
+      "status": "VERIFIED",
+      "issue_title": "ZeroDivisionError in calculate_fees() on checkout",
+      "confidence": 100,
+      "tests_passed": "2/2",
+      "patch_summary": "Safe auto-merge complete"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-1-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: title",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-1",
+      "issue_title": "title",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-123-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: Fix division by zero",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-123",
+      "issue_title": "Fix division by zero",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-555-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: Fix payment",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-555",
+      "issue_title": "Fix payment",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-900-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: Fix something",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-900",
+      "issue_title": "Fix something",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-901-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: Fix another thing",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-901",
+      "issue_title": "Fix another thing",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  },
+  {
+    "id": "MEM-ISSUE-999-FAILED_TRAJECTORY",
+    "content": "FAILED_TRAJECTORY: CI Determinism Test",
+    "metadata": {
+      "event_type": "FINAL_OUTCOME",
+      "classification": "FAILED_TRAJECTORY",
+      "issue_id": "ISSUE-999",
+      "issue_title": "CI Determinism Test",
+      "timestamp": "CURRENT_TIME",
+      "hash": "DETERMINISTIC_HASH"
+    }
+  }
+]

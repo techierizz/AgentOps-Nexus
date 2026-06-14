@@ -1,0 +1,106 @@
+[
+  {
+    "from": "init",
+    "to": "load_issue",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:18.622809",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "load_issue",
+    "to": "index_repo",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:19.637662",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "index_repo",
+    "to": "search_memory",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:20.695833",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "search_memory",
+    "to": "hypothesize",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:21.714246",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "hypothesize",
+    "to": "validate_rca",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:22.722017",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "validate_rca",
+    "to": "generate_patch",
+    "condition": "rca_validated",
+    "timestamp": "2026-06-14T15:45:23.730932",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "generate_patch",
+    "to": "validate_patch",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:26.886762",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "validate_patch",
+    "to": "security_scan",
+    "condition": "patch_safe",
+    "timestamp": "2026-06-14T15:45:27.902285",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "security_scan",
+    "to": "run_tests",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:28.911636",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "run_tests",
+    "to": "evaluate_confidence",
+    "condition": "tests_passed",
+    "timestamp": "2026-06-14T15:45:32.259676",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "evaluate_confidence",
+    "to": "merge_decision",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:33.272780",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "merge_decision",
+    "to": "create_pr",
+    "condition": "merge_allowed",
+    "timestamp": "2026-06-14T15:45:34.285298",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "create_pr",
+    "to": "completed",
+    "condition": null,
+    "timestamp": "2026-06-14T15:45:36.439145",
+    "duration_ms": null,
+    "error": null
+  }
+]

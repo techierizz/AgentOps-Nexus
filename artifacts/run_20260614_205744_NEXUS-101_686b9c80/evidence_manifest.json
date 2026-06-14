@@ -1,0 +1,13 @@
+{
+  "run_id": "run_20260614_205744_NEXUS-101_686b9c80",
+  "finalized_at": "2026-06-14T20:57:49.396588",
+  "artifact_count": 1,
+  "final_evidence_root_hash": "04b478d4f40aa1acdd5324e4e1eb0b7f4bb00a2ff748cfb0e7f163e7092b8651",
+  "artifacts": {
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "98ccb818d52888fa6490c1fe77099906a04a1d5e9da0d8f94ca5db5134cdd624"
+    }
+  },
+  "manifest_sha256": "b5460309831da362b92c9f81293bb7243d7a81a643d952dc3d2e4bf873a3e487"
+}

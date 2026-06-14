@@ -1,0 +1,17 @@
+{
+  "run_id": "test_failure_run_001",
+  "finalized_at": "2026-06-14T23:05:58.501127",
+  "artifact_count": 2,
+  "final_evidence_root_hash": "34ac49fbcdef2eaa5f5806605f088bbab1971211d7c3ac1f30a50125598e32ba",
+  "artifacts": {
+    "tool_execution": {
+      "path": "tool_execution.json",
+      "sha256": "e47293cc7d33e434c3266245e637f4723cf49aa8ff0d1ef681cf3e3a58be6011"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "f205a74229c153a59fc8455758671ff1b02443c51cb6b20c18d5850e03faa814"
+    }
+  },
+  "manifest_sha256": "1382b698ffe02d950df5dd8e6bb2d8467e5dde122304d54d4deb47d1968fe0fc"
+}

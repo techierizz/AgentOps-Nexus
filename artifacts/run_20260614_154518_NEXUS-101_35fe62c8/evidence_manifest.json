@@ -1,0 +1,64 @@
+{
+  "run_id": "run_20260614_154518_NEXUS-101_35fe62c8",
+  "finalized_at": "2026-06-14T15:45:36.456918",
+  "artifact_count": 14,
+  "artifacts": {
+    "issue": {
+      "path": "issue.json",
+      "sha256": "e53c2f176a3c18e41f81ddfff07297ad4b76c61c94ec6f90738585a3958c30dd"
+    },
+    "knowledge_graph": {
+      "path": "knowledge_graph.json",
+      "sha256": "2ad3cfa4e672f8fa495f1fccd601a9f9ebe22a3b838174d0e4e2cb66fd541514"
+    },
+    "hypotheses": {
+      "path": "hypotheses.json",
+      "sha256": "b9bac5def8365ff8a232b16217a251f82d5f9fbd6221c48003ad19fc8582de3e"
+    },
+    "rca_report": {
+      "path": "rca_report.json",
+      "sha256": "1b08e0a9e1c1d840f7e7232f606ce6dca01f32892296d3e0489e88e5a3de2184"
+    },
+    "patch": {
+      "path": "patch.diff",
+      "sha256": "c4823b140c1d20682bc1c60d82c6584c4a2d6ab6ccd9671c621d63524caa7935"
+    },
+    "patch_validation": {
+      "path": "patch_validation.json",
+      "sha256": "36b0403c456a471efa5a29fc0c9d69e13ee94963c9917e1762408b94bd26038b"
+    },
+    "security_report": {
+      "path": "security_report.json",
+      "sha256": "d60c4ad312b622e3df03394c9135d614a5bd07e6b8622498d3f7cd17639166b8"
+    },
+    "test_results": {
+      "path": "test_results.json",
+      "sha256": "bb7f103229485185765e13682186a186324d2e74ac11a6d7129f08c3bfd30c0f"
+    },
+    "confidence_report": {
+      "path": "confidence_report.json",
+      "sha256": "62747d66e4cdfb2e1ebcb695adf4b642f5e184c638884ebfa3bcbb6cbba15be5"
+    },
+    "merge_decision": {
+      "path": "merge_decision.json",
+      "sha256": "ea4c5cd99dc80fa00d7d9d5b5f9f7e936ee349fbf34ff4339e1bcdf6b22ada43"
+    },
+    "state_transitions": {
+      "path": "state_transitions.json",
+      "sha256": "d8de83a7e00ef47ed290e939c7f15098c959381bfa98ca2cc9ffacb3ca62ff97"
+    },
+    "rollback_history": {
+      "path": "rollback_history.json",
+      "sha256": "712a86bc754510c2fbfe473ce0314a1417b518dae076500fa6290d6f0296157f"
+    },
+    "resource_usage": {
+      "path": "resource_usage.json",
+      "sha256": "f0162ca25e78fabba480b73b0316cc43b7bee57b0adfe629b2e387cb60fb21d8"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "b4b5ffffa7929032a0783a60a66a171f875950b2078d32ca901287eff89facb4"
+    }
+  },
+  "manifest_sha256": "c0f6d806c543cb779e876454e0252bff68066314482c4bf41fb7c9b579f22621"
+}

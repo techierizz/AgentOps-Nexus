@@ -1,0 +1,18 @@
+[
+  {
+    "from": "init",
+    "to": "load_issue",
+    "condition": null,
+    "timestamp": "2026-06-14T17:21:08.159212",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "load_issue",
+    "to": "failed",
+    "condition": "forced_failure",
+    "timestamp": "2026-06-14T17:21:09.160310",
+    "duration_ms": null,
+    "error": "('unrecognized type cannot be deterministically serialized', 'ExecutionArtifactManager', 'run_20260614_172107_ISSUE-123_ae78fd55')"
+  }
+]

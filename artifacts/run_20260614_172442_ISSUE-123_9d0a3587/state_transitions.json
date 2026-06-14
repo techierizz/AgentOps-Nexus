@@ -1,0 +1,18 @@
+[
+  {
+    "from": "init",
+    "to": "load_issue",
+    "condition": null,
+    "timestamp": "2026-06-14T17:24:43.044076",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "load_issue",
+    "to": "failed",
+    "condition": "forced_failure",
+    "timestamp": "2026-06-14T17:24:44.045206",
+    "duration_ms": null,
+    "error": "('float is not permitted \u2014 use Decimal with fixed precision', 'float', 'run_20260614_172442_ISSUE-123_9d0a3587')"
+  }
+]

@@ -1,0 +1,236 @@
+{
+  "nodes": [
+    {
+      "id": "payment_processor.py",
+      "label": "payment_processor.py",
+      "type": "file",
+      "properties": {
+        "path": "payment_processor.py",
+        "size": 2025
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor",
+      "label": "PaymentProcessor",
+      "type": "class",
+      "properties": {
+        "file": "payment_processor.py",
+        "bases": []
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor::__init__",
+      "label": "__init__",
+      "type": "function",
+      "properties": {
+        "file": "payment_processor.py",
+        "class": "PaymentProcessor",
+        "args": [
+          "self"
+        ]
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor::calculate_fees",
+      "label": "calculate_fees",
+      "type": "function",
+      "properties": {
+        "file": "payment_processor.py",
+        "class": "PaymentProcessor",
+        "args": [
+          "self",
+          "total_fee",
+          "total_items"
+        ]
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor::apply_discount",
+      "label": "apply_discount",
+      "type": "function",
+      "properties": {
+        "file": "payment_processor.py",
+        "class": "PaymentProcessor",
+        "args": [
+          "self",
+          "code"
+        ]
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor::get_coupon_map",
+      "label": "get_coupon_map",
+      "type": "function",
+      "properties": {
+        "file": "payment_processor.py",
+        "class": "PaymentProcessor",
+        "args": [
+          "self",
+          "code"
+        ]
+      }
+    },
+    {
+      "id": "payment_processor.py::PaymentProcessor::process_order",
+      "label": "process_order",
+      "type": "function",
+      "properties": {
+        "file": "payment_processor.py",
+        "class": "PaymentProcessor",
+        "args": [
+          "self",
+          "amount",
+          "items",
+          "discount_code"
+        ]
+      }
+    },
+    {
+      "id": "stripe_client.py",
+      "label": "stripe_client.py",
+      "type": "file",
+      "properties": {
+        "path": "stripe_client.py",
+        "size": 192
+      }
+    },
+    {
+      "id": "stripe_client.py::charge_card",
+      "label": "charge_card",
+      "type": "function",
+      "properties": {
+        "file": "stripe_client.py",
+        "class": null,
+        "args": [
+          "amount"
+        ]
+      }
+    },
+    {
+      "id": "test_payment.py",
+      "label": "test_payment.py",
+      "type": "file",
+      "properties": {
+        "path": "test_payment.py",
+        "size": 1221
+      }
+    },
+    {
+      "id": "test_payment.py::test_successful_checkout",
+      "label": "test_successful_checkout",
+      "type": "function",
+      "properties": {
+        "file": "test_payment.py",
+        "class": null,
+        "args": []
+      }
+    },
+    {
+      "id": "test_payment.py::test_zero_items_division",
+      "label": "test_zero_items_division",
+      "type": "function",
+      "properties": {
+        "file": "test_payment.py",
+        "class": null,
+        "args": []
+      }
+    },
+    {
+      "id": "test_payment.py::test_stripe_import_loading",
+      "label": "test_stripe_import_loading",
+      "type": "function",
+      "properties": {
+        "file": "test_payment.py",
+        "class": null,
+        "args": []
+      }
+    },
+    {
+      "id": "test_payment.py::test_invalid_coupon_type_error",
+      "label": "test_invalid_coupon_type_error",
+      "type": "function",
+      "properties": {
+        "file": "test_payment.py",
+        "class": null,
+        "args": []
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "payment_processor.py::PaymentProcessor",
+      "target": "payment_processor.py",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::__init__",
+      "target": "payment_processor.py::PaymentProcessor",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::calculate_fees",
+      "target": "payment_processor.py::PaymentProcessor",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::apply_discount",
+      "target": "payment_processor.py::PaymentProcessor",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::apply_discount",
+      "target": "payment_processor.py::PaymentProcessor::get_coupon_map",
+      "type": "calls"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::get_coupon_map",
+      "target": "payment_processor.py::PaymentProcessor",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::process_order",
+      "target": "payment_processor.py::PaymentProcessor",
+      "type": "declared_in"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::process_order",
+      "target": "payment_processor.py::PaymentProcessor::calculate_fees",
+      "type": "calls"
+    },
+    {
+      "source": "payment_processor.py::PaymentProcessor::process_order",
+      "target": "payment_processor.py::PaymentProcessor::apply_discount",
+      "type": "calls"
+    },
+    {
+      "source": "stripe_client.py::charge_card",
+      "target": "stripe_client.py",
+      "type": "contains_function"
+    },
+    {
+      "source": "test_payment.py",
+      "target": "payment_processor.py",
+      "type": "imports"
+    },
+    {
+      "source": "test_payment.py::test_successful_checkout",
+      "target": "test_payment.py",
+      "type": "contains_function"
+    },
+    {
+      "source": "test_payment.py::test_zero_items_division",
+      "target": "test_payment.py",
+      "type": "contains_function"
+    },
+    {
+      "source": "test_payment.py::test_stripe_import_loading",
+      "target": "test_payment.py",
+      "type": "contains_function"
+    },
+    {
+      "source": "test_payment.py::test_invalid_coupon_type_error",
+      "target": "test_payment.py",
+      "type": "contains_function"
+    }
+  ]
+}

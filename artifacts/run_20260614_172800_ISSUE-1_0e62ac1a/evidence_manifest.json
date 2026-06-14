@@ -1,0 +1,57 @@
+{
+  "run_id": "run_20260614_172800_ISSUE-1_0e62ac1a",
+  "finalized_at": "2026-06-14T17:28:15.483707",
+  "artifact_count": 12,
+  "final_evidence_root_hash": "ff67b79444543d9b0c03d8ea6fb69d7b939eb64297316289cfd93d02f115ab0e",
+  "artifacts": {
+    "issue": {
+      "path": "issue.json",
+      "sha256": "2095766b3c5ccaf59b63032b614e123e6a23e762f0887babc875d7ffedd85a2c"
+    },
+    "state_transition": {
+      "path": "state_transition.json",
+      "sha256": "e6f01470a7e3ad294cefb987eb87e10d686303d64b765187f4051a199c216a4d"
+    },
+    "environment_fingerprint": {
+      "path": "environment_fingerprint.json",
+      "sha256": "8c2e90e9b88bd0e26da39d5a7108fdf12489214618c90d3efde3f841a1b93d36"
+    },
+    "knowledge_graph": {
+      "path": "knowledge_graph.json",
+      "sha256": "25e8f69d61e823f90289d693bb41461a995e4e5a4e24352e624c8cce9a571c83"
+    },
+    "hypotheses": {
+      "path": "hypotheses.json",
+      "sha256": "dcc1ec42e37e92a68e63d80e0e3dd8418e498abc9c0aa949af28fac144d1fa26"
+    },
+    "rca_report": {
+      "path": "rca_report.json",
+      "sha256": "ed872cf8558e433a2181625ff41ff95bad91dbb18cd33269b25af8f3611816ee"
+    },
+    "patch_validation": {
+      "path": "patch_validation.json",
+      "sha256": "d3d0911538324662376f69e36d3b7d24a5f151f458282f77920b1e55199741d2"
+    },
+    "security_report": {
+      "path": "security_report.json",
+      "sha256": "9e8ebc0336c04a9833e8b0243ab5eecc4056b544972a57c4c4c40853cc10fb71"
+    },
+    "test_results": {
+      "path": "test_results.json",
+      "sha256": "20074bac6daab252e9574819c978a5259f732936a743bf9ee8bb737eed3c6e26"
+    },
+    "confidence_report": {
+      "path": "confidence_report.json",
+      "sha256": "b0565367ad7669782904f0c811fa4df6c0b9f780d72e2cb8845e3322a086d994"
+    },
+    "merge_decision": {
+      "path": "merge_decision.json",
+      "sha256": "c9846a605bb344873e4d467746101a8cb4bd35ecc2cf2913e0f1b519b3bb3d3f"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "5a700213656c39092fcd2f0e93b4a7c3bded6f8a1186e5e4911c67aef02d27f1"
+    }
+  },
+  "manifest_sha256": "da622a62e0fa69f63dbb0b0075451a0104af9884377e7019ed521403ca65c8a7"
+}

@@ -1,0 +1,17 @@
+{
+  "run_id": "test_run_validation_001",
+  "finalized_at": "2026-06-14T23:37:45.086683",
+  "artifact_count": 2,
+  "final_evidence_root_hash": "1a879a37b3c311808781ad8c0e82d15f57b3c7403056b61dd325c1bde0e8219f",
+  "artifacts": {
+    "tool_execution": {
+      "path": "tool_execution.json",
+      "sha256": "2a8ed88f9827edb737204404dd2199b35e52044ba786daaf6dd6f81d4af6a46f"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "06d08c3e78f4083bbcfd3bfa937380c9b3319079544466a0a538cb7cb1ffcf46"
+    }
+  },
+  "manifest_sha256": "e4656650db661700cbb0d36a361d7e9a89b6bd1de47f3ab83a815e4f6a7786c6"
+}

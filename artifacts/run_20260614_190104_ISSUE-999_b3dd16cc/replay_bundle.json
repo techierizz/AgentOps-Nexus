@@ -1,0 +1,1100 @@
+{
+  "run_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+  "metadata": {
+    "timestamp": "2026-06-14T13:31:19.565165+00:00Z",
+    "total_events": 67,
+    "final_hash": "6da17211caaf21dde3a5e42a0729548b6ada9ad298a76502c1c5b28d550127cd"
+  },
+  "ledger_snapshot": [
+    {
+      "event_type": null,
+      "ledger_event_id": "80013d17147419d6b9f0e6e9346bdbb70f4336ce0f147f693bb0bc92dde9108e",
+      "timestamp": "2026-06-14T19:01:04.615701",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "description": "Determinism verification",
+        "issue_id": "ISSUE-999",
+        "repo_path": "test_repo",
+        "title": "CI Determinism Test"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "7326fe6f89961a5f39ac11b86d65e99a6163745f6743076cde7624fa878822e1",
+      "timestamp": "2026-06-14T13:31:04.618030+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:04Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "67a13bd87a57ae2527bcc87e8459cbc8340ecd465aa489b77683671e6d63eb69",
+      "timestamp": "2026-06-14T13:31:04.619452+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "INIT",
+        "to_state": "LOAD_ISSUE",
+        "transition_timestamp": "2026-06-14T13:31:04Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "20662201844f3b3c57c5eb5f1e46a4890661ad8d0cd2bdb6d320fbe030a999a1",
+      "timestamp": "2026-06-14T13:31:05.627180+00:00",
+      "payload_hash": "9bf2fb6b4205ae4558364e629814d9cfa4d189bb9ecc78b73c51b5096842bad2",
+      "canonical_payload": {
+        "agent_id": "Issue Agent",
+        "from_state": "bd87feeb7d9614f5986c7be6bdfd25b33e4c1bd2ff16e1cc32547249bfd3844e",
+        "to_state": "9bf2fb6b4205ae4558364e629814d9cfa4d189bb9ecc78b73c51b5096842bad2",
+        "state_hash": "9bf2fb6b4205ae4558364e629814d9cfa4d189bb9ecc78b73c51b5096842bad2",
+        "transition_timestamp": "2026-06-14T13:31:05Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "138a9c50cb84d341dd7b4abb2ae399a87c3ea451bc49863cefa85816a950c1f0",
+      "timestamp": "2026-06-14T19:01:05.629557",
+      "payload_hash": "290eb3a9a92b11593a613f28d2a107183cb6ea44915b87f9f2d9b4d38deb4ec1",
+      "canonical_payload": {
+        "agent_id": "Issue Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "290eb3a9a92b11593a613f28d2a107183cb6ea44915b87f9f2d9b4d38deb4ec1",
+        "previous_state_hash": "b76cbf8828f66a90cd13dcb8055c575fb4f24a60fbf60bbeca066cb8967c842b"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "5b65be827665121304f2e3670ee514b0260357fc70d31ce9bd1b6004759b80fe",
+      "timestamp": "2026-06-14T19:01:05.630649",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "description": "Determinism verification",
+        "error_type": "Generic Bug",
+        "issue_id": "ISSUE-999",
+        "suspected_files": [],
+        "title": "CI Determinism Test"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "22420dc66ddbea16e7bfd788918909889b33bfa79b1f0c367d21fe2e1c402580",
+      "timestamp": "2026-06-14T19:01:05.632888",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "container_image_digest": "962b1908f0879d6fdd8f731202999be4cbe8a85221115f7e1c503515f6716209",
+        "dependency_lock_hash": "ece9ac59c80f6dfce2ca83a65766fc257fff4ac349009e41168f1d6eb3a0c098",
+        "environment_variable_hash": "3d6b91af081489422c2c62d37463699a1f90e8d4b19d6c704e99a04148ea240e"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "5b5bac9fe8201a2387a2ed4a53869cc46f95cdd6f3ac3369e26d04b945aace6e",
+      "timestamp": "2026-06-14T13:31:05.635080+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:05Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "403a33283ab94108f6ea05fffad6485fb54b24798833a8869643708caa7a5572",
+      "timestamp": "2026-06-14T13:31:05.636590+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "LOAD_ISSUE",
+        "to_state": "INDEX_REPO",
+        "transition_timestamp": "2026-06-14T13:31:05Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "5a4a23ad259dc6690df71154ce536f3a49d1f2f0ff37062b836a191d154ff27f",
+      "timestamp": "2026-06-14T13:31:06.646223+00:00",
+      "payload_hash": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+      "canonical_payload": {
+        "agent_id": "Repository Intel Agent",
+        "from_state": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "to_state": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "state_hash": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "transition_timestamp": "2026-06-14T13:31:06Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "7b8435874c23d2842ac0f8217b2e772cc96a9bd1c353e97b5a2e4bbf75f63a64",
+      "timestamp": "2026-06-14T13:31:06.649486+00:00",
+      "payload_hash": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+      "canonical_payload": {
+        "agent_id": "Repository Intel Agent",
+        "from_state": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "to_state": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "state_hash": "7e119c1fac6cedb7d57bae97d038025c774701e50190e14a4a79bc238f03cd2f",
+        "transition_timestamp": "2026-06-14T13:31:06Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "549986562c5b23d237e71a057926a0789a6a965c447701321775016ad171db16",
+      "timestamp": "2026-06-14T19:01:06.652515",
+      "payload_hash": "4e8d7dd505c57c5631b50fbc6b15a498f6a5de6f9fba1efe0eb64e2851f9edf8",
+      "canonical_payload": {
+        "agent_id": "Repository Intel Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "4e8d7dd505c57c5631b50fbc6b15a498f6a5de6f9fba1efe0eb64e2851f9edf8",
+        "previous_state_hash": "56dfe038719ef38df886338a55a14a63d6b82057a451f9922697301d87ea4c3c"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "c6cceb115fd53585ea5e09cdcecc1ade8cf011e74259662a6f6955c196fb6183",
+      "timestamp": "2026-06-14T19:01:06.655545",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "edges": [],
+        "nodes": []
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "2dae7536bb70a88b0cbeb66652eab076f2435cfb5029aa76a89878f2246d7620",
+      "timestamp": "2026-06-14T13:31:06.658924+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:06Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "5d10c53633f38ffa2e7699596ad44daf220eb498c4c3d97c717d5e07aaff4921",
+      "timestamp": "2026-06-14T13:31:06.659936+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "INDEX_REPO",
+        "to_state": "SEARCH_MEMORY",
+        "transition_timestamp": "2026-06-14T13:31:06Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "20d81257fe6fece34b18166b48d3f93d5e5ca946a2fc6b066a7f25bc09651466",
+      "timestamp": "2026-06-14T13:31:07.675005+00:00",
+      "payload_hash": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+      "canonical_payload": {
+        "agent_id": "Memory Agent",
+        "from_state": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+        "to_state": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+        "state_hash": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+        "transition_timestamp": "2026-06-14T13:31:07Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "40d0bc5cd5042f9673b16efc50374a3c10b7808fa5ac43bde51385514d5a0f63",
+      "timestamp": "2026-06-14T19:01:07.677042",
+      "payload_hash": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+      "canonical_payload": {
+        "agent_id": "Memory Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+        "previous_state_hash": "9d1a09cf578192e60897e483e06610cf0e59f27f64b5824d17e93f2f7379b7d6"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "d51e335dc7f431efc30b8585d83ce51f38bd15b63a32ebc0ef3ccd3590f342da",
+      "timestamp": "2026-06-14T13:31:07.680613+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:07Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "4bdc6004df219acb07a418b78c15ef6813bbc4a8406c75dfb589afe85163777f",
+      "timestamp": "2026-06-14T13:31:07.681620+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "SEARCH_MEMORY",
+        "to_state": "HYPOTHESIZE",
+        "transition_timestamp": "2026-06-14T13:31:07Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "3320d9a3bf6c39b0d7afe7153b9ae353b81480ab7aa2683e42fb80d3dbbad08a",
+      "timestamp": "2026-06-14T13:31:08.693634+00:00",
+      "payload_hash": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+      "canonical_payload": {
+        "agent_id": "Hypothesis Agent",
+        "from_state": "83b990779db95c381b5d9714ad1866cb983b502cededeeb9d956106cddc5395b",
+        "to_state": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+        "state_hash": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+        "transition_timestamp": "2026-06-14T13:31:08Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "06ca0dcb0595010f6536b7b65877416cf66cf31a3b8713db289b47b987532657",
+      "timestamp": "2026-06-14T19:01:08.695640",
+      "payload_hash": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+      "canonical_payload": {
+        "agent_id": "Hypothesis Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+        "previous_state_hash": "3c069da4162ccb9a45e98f08531125ba3ccc0391e530da317b67140283af9ac3"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "09621042d6bbc19948238b9390a4f49e17d2c3844e239ccabea63603f3f5986a",
+      "timestamp": "2026-06-14T19:01:08.698180",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": [
+        {
+          "confidence": 70,
+          "description": "Generic logic fault in payment_processor.py logic blocks",
+          "id": "H1",
+          "reasoning": "Based on general codebase layout, logic handlers in payment_processor contain the core calculation code.",
+          "target_file": "payment_processor.py",
+          "validation_status": "pending"
+        }
+      ]
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "7c1ca288649c09c588d8ab4f3fca9cacc4c200a477bd10f2c4842c39a19ca4db",
+      "timestamp": "2026-06-14T13:31:08.701321+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:08Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "8d675dd7e87de1e33e37d13ac2ba3b3b1a4b3a83f1e3bc0bcf163fe47180b50d",
+      "timestamp": "2026-06-14T13:31:08.702328+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "HYPOTHESIZE",
+        "to_state": "VALIDATE_RCA",
+        "transition_timestamp": "2026-06-14T13:31:08Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "ba5262511f0ab001832bdc33025ad56578575f5b77f239625eb8be0c5367b201",
+      "timestamp": "2026-06-14T13:31:09.718911+00:00",
+      "payload_hash": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+      "canonical_payload": {
+        "agent_id": "Root Cause Agent",
+        "from_state": "672d2791b1ccf34b699f48b7bb39ee902913f9583cfb886084f58120add99e49",
+        "to_state": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+        "state_hash": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+        "transition_timestamp": "2026-06-14T13:31:09Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "720ea14cb713556ea408319029aabca74e2577dfb32a8f0b7eafbd193ea1e142",
+      "timestamp": "2026-06-14T19:01:09.720923",
+      "payload_hash": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+      "canonical_payload": {
+        "agent_id": "Root Cause Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+        "previous_state_hash": "240cb16243a682dd3978e7fa42d8573ff8150d6e9c60c27be6f49679075d4f80"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "91024a3b2f4330113378211ab93ec10e706774e847d5d344e7ce112ac5a121e7",
+      "timestamp": "2026-06-14T19:01:09.723432",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "evidence": [
+          "No hypothesis could be validated against codebase files."
+        ],
+        "hypothesis_confidence": 0,
+        "issue_id": "ISSUE-999",
+        "origin_issue": "CI Determinism Test",
+        "root_cause": "Validation Conflict: Evidence chain broken",
+        "selected_hypothesis": "None - Validation Mismatch",
+        "status": "RCA_CONFLICT_DETECTED"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "d0e68453a782ceebc07673218e67c45e7f1c08ba59732ee08f82c455f35d14f4",
+      "timestamp": "2026-06-14T13:31:09.726980+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:09Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "ced3c230c2f2391a5e8dd412de80125f486bfda243df084d9a957b0ab6514425",
+      "timestamp": "2026-06-14T13:31:09.727984+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "VALIDATE_RCA",
+        "to_state": "GENERATE_PATCH",
+        "transition_timestamp": "2026-06-14T13:31:09Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "98e3817102957fe94f15adc1d8bdd9419bbd6375126d655ff3a0824bf9621c4b",
+      "timestamp": "2026-06-14T13:31:11.819106+00:00",
+      "payload_hash": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+      "canonical_payload": {
+        "agent_id": "Patch Agent",
+        "from_state": "4a4e941d86449b8ac6172a9ed8f56a9442520017f44e95a30b4be0d99fd165d8",
+        "to_state": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+        "state_hash": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+        "transition_timestamp": "2026-06-14T13:31:11Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "496cd789a2a19d530c9728a6e4f6c0da975bf40bc5fd2e5ab9b469603bba6e4e",
+      "timestamp": "2026-06-14T19:01:11.821430",
+      "payload_hash": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+      "canonical_payload": {
+        "agent_id": "Patch Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+        "previous_state_hash": "efdf16098511cdedb2f17fb1bd13ed0d7f48a4189111b548d3c94c70c9a9a3e5"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "40c4b78976d39c8c4839c2725c76a8aa46a8c3a0d7f157feba12fbbfda7e994b",
+      "timestamp": "2026-06-14T13:31:12.825889+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:12Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "342dfcb63cb54863d4d269f02d0c11192ceba8d78d7a229b22b0c51294d734ed",
+      "timestamp": "2026-06-14T13:31:12.827032+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "GENERATE_PATCH",
+        "to_state": "VALIDATE_PATCH",
+        "transition_timestamp": "2026-06-14T13:31:12Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "22f2fe2c5548e6d7690c2a04bca4e69215e4c63030301dc88648ad031e9bcef9",
+      "timestamp": "2026-06-14T13:31:13.837008+00:00",
+      "payload_hash": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+      "canonical_payload": {
+        "agent_id": "Patch Validation Agent",
+        "from_state": "c72eb953d2e11826ba2b596aa01209c96634a422299639c53005d8d458a05d2a",
+        "to_state": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+        "state_hash": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+        "transition_timestamp": "2026-06-14T13:31:13Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "6f19af5a3dd979be8bbf5e541bceb1210644c2c4860fbda24d5ebc714a3c1a96",
+      "timestamp": "2026-06-14T19:01:13.838830",
+      "payload_hash": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+      "canonical_payload": {
+        "agent_id": "Patch Validation Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+        "previous_state_hash": "4dcdd7e68bbfaf9a79c1dddf1703e9e6f648cb4168eb11d3be4f17dadcedae8e"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "2fd4346f42858c32d6445826ff7b24256e5ec13ec67904d1661d5c170e313681",
+      "timestamp": "2026-06-14T19:01:13.841852",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "approval": "SAFE_TO_TEST",
+        "complexity_delta": 0,
+        "details": "No patches to validate.",
+        "files_changed": 0,
+        "high_risk_files": [],
+        "lines_added": 0,
+        "lines_deleted": 0,
+        "risk_score": 0,
+        "structural_valid": true,
+        "syntax_valid": true,
+        "unexpected_changes": false
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "995af6bf6f01f22c20ab3a31a117aaada8f8a41d7e9e80e938388902e74e6a2b",
+      "timestamp": "2026-06-14T13:31:13.847936+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:13Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "4d2ba0099b615b3a555b3e2f27c9cc2a13a000034e2f9be6b8e468d691984611",
+      "timestamp": "2026-06-14T13:31:13.847936+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "VALIDATE_PATCH",
+        "to_state": "SECURITY_SCAN",
+        "transition_timestamp": "2026-06-14T13:31:13Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "12e6a08cd03d0b07f5e2fd835bacb98eec0e7eb8fdd3515d6d9d50cb51ff47f1",
+      "timestamp": "2026-06-14T13:31:14.858073+00:00",
+      "payload_hash": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+      "canonical_payload": {
+        "agent_id": "Security Agent",
+        "from_state": "351188fd859c1d701def760531e474870404b53d074324589ac2389c79db8a5a",
+        "to_state": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+        "state_hash": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+        "transition_timestamp": "2026-06-14T13:31:14Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "fd66e3b0ea60a63f0101f106240012330c4be24e8054b3bce326142cc491481e",
+      "timestamp": "2026-06-14T19:01:14.860681",
+      "payload_hash": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+      "canonical_payload": {
+        "agent_id": "Security Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+        "previous_state_hash": "21ddbd93fb9eed603d2a482122f0b5b55143fd13b56aa98f3174427db179f3fe"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "de1965f7b29f58d66a900a4e78b10ee654402404b0618bfee613e3d37a2e837d",
+      "timestamp": "2026-06-14T19:01:14.862692",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "message": "No patch to analyze.",
+        "status": "passed",
+        "vulnerabilities": []
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "6a751d915685005a30aa73f0457a0c498066e3d5d6bf4601189e07ed28f1145d",
+      "timestamp": "2026-06-14T13:31:14.866752+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:14Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "c7390d8cd507e455eadcba3ae36bab6ccfbd85eca34e409924e1faf522ba07a0",
+      "timestamp": "2026-06-14T13:31:14.867760+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "SECURITY_SCAN",
+        "to_state": "RUN_TESTS",
+        "transition_timestamp": "2026-06-14T13:31:14Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "3184a7d1b9ca4e969f02cbef0d87e83f21b09cc4b799924630a9d7b24e6a29cd",
+      "timestamp": "2026-06-14T13:31:15.879752+00:00",
+      "payload_hash": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+      "canonical_payload": {
+        "agent_id": "Testing Agent",
+        "from_state": "221442cc4ab6c4dd3e3e4a64f53f52903d5a5578f152e161acdbbb7c2cd4067b",
+        "to_state": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+        "state_hash": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+        "transition_timestamp": "2026-06-14T13:31:15Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "f4a9d63e482861b56534f8ef323b3016a58a59735f02b58d6c48e94ec72994dc",
+      "timestamp": "2026-06-14T19:01:15.882849",
+      "payload_hash": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+      "canonical_payload": {
+        "agent_id": "Testing Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+        "previous_state_hash": "33178055e3c4a18baebe2519c6b6cdea89e09ba8be21125ca4d43268d1302ef8"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "e98dabe02ec559ab8de7b272a0904db00ccf0fb85d71d971ba80acde01256ae9",
+      "timestamp": "2026-06-14T19:01:15.885261",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "coverage": 100,
+        "failed_count": 0,
+        "log": "Test file not found. Mocked run passed.",
+        "passed": true,
+        "passed_count": 5,
+        "total_count": 5
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "81c42a3b76ad30c2d8c5fb2b3d59e3b7a95ab0e82179e9e410f0ddbeefdcfbab",
+      "timestamp": "2026-06-14T13:31:16.275072+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:16Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "71b9d34ff58503ac9b225497806be9ece3a47ce9bc8ed82a096e6abdc0f4ac94",
+      "timestamp": "2026-06-14T13:31:16.276096+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "RUN_TESTS",
+        "to_state": "EVALUATE_CONFIDENCE",
+        "transition_timestamp": "2026-06-14T13:31:16Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "f54f1e79cb571f774e8394d30a5656e6cbe97d7e7b3965be4c0a2ef72a50ef6d",
+      "timestamp": "2026-06-14T13:31:17.295717+00:00",
+      "payload_hash": "9b2eb42cf82117600e0f32219cfb8760871cf46362c148a3e3801c32d8573ef6",
+      "canonical_payload": {
+        "agent_id": "Confidence Agent",
+        "from_state": "9b4fa3914af231d1dfdb048a5e7b1dd8f560b8857f39f0b423225dfce2ea4b5c",
+        "to_state": "9b2eb42cf82117600e0f32219cfb8760871cf46362c148a3e3801c32d8573ef6",
+        "state_hash": "9b2eb42cf82117600e0f32219cfb8760871cf46362c148a3e3801c32d8573ef6",
+        "transition_timestamp": "2026-06-14T13:31:17Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "e85c29ab1a7da6a62e4102daa3b612f38cbabad76d78c0e4760c6993276d2c36",
+      "timestamp": "2026-06-14T19:01:17.299754",
+      "payload_hash": "9e881544221a582b43e30141d45ec889862abf1ab42a3532907001e334560cce",
+      "canonical_payload": {
+        "agent_id": "Confidence Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "9e881544221a582b43e30141d45ec889862abf1ab42a3532907001e334560cce",
+        "previous_state_hash": "c05976ce973158ff03fcc19688ab3806150f19d15bcf999d8db0e51279a9c55b"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "05cf2cf6cdadbbabc9a4146ee18cf299f34f6e43a2678f7caa6f5477ff524bf8",
+      "timestamp": "2026-06-14T19:01:17.302327",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "factors": {
+          "memory_retrieval_weight": 0,
+          "modification_scope_weight": 10,
+          "security_scan_weight": 20,
+          "system_certainty_weight": 10,
+          "test_pass_weight": 40
+        },
+        "files_modified": 0,
+        "risk": "Medium",
+        "safety": "Medium",
+        "score": 80,
+        "tests_passed": "5/5"
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "e69ae93e5cc845f4fe3d950d8517a9de3f410b0625362f47592740904bf684dd",
+      "timestamp": "2026-06-14T13:31:17.308370+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:17Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "608f48a569a383bc0a4231b9403ff23ec65554c01dd12a6af5276b2c26edf5ec",
+      "timestamp": "2026-06-14T13:31:17.309559+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "EVALUATE_CONFIDENCE",
+        "to_state": "MERGE_DECISION",
+        "transition_timestamp": "2026-06-14T13:31:17Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "d39cd652199ebe8c6fc50eb5108ad7ad9d5d54c2429d14a3fdbb3d7ff848a566",
+      "timestamp": "2026-06-14T13:31:18.327038+00:00",
+      "payload_hash": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+      "canonical_payload": {
+        "agent_id": "Merge Governor",
+        "from_state": "0192cf19a91a077b23663edb34053d14bbfe81e31b66fc6f5021a80993f5922a",
+        "to_state": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+        "state_hash": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+        "transition_timestamp": "2026-06-14T13:31:18Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "6b4989d3843810b6a46ce420eed8059e3f57848f26bd30b1144508278e71f1b6",
+      "timestamp": "2026-06-14T19:01:18.328084",
+      "payload_hash": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+      "canonical_payload": {
+        "agent_id": "Merge Governor",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+        "previous_state_hash": "3b468462163e8e4cebfc64e83346f4c0b5b586b3f9396cba8cb19d2c35f6fc96"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "c14230c2fd9f1faa9204889824d1e93f55a3f40450750aad31172d1e61d25071",
+      "timestamp": "2026-06-14T19:01:18.329594",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "decision": "DRAFT",
+        "failure_report": "",
+        "reason": "Partial success or confidence score between 60-84%."
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "5e4905a18fc9fcfb21a6a3acf7203e6990c01b5c6adfe51d86bdc5742ca26f34",
+      "timestamp": "2026-06-14T13:31:18.337322+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:18Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "b27251264e488a534575ca8b175bf0042e0ae0310dffbff5339a20e6b4ac2bfa",
+      "timestamp": "2026-06-14T13:31:18.338336+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "MERGE_DECISION",
+        "to_state": "CREATE_PR",
+        "transition_timestamp": "2026-06-14T13:31:18Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "318c64e5a951bb28d4e2a1f3ff9c5cb329af58e711b2239cd7af37d7070ab00d",
+      "timestamp": "2026-06-14T13:31:19.532922+00:00",
+      "payload_hash": "78d3991d55969708482c3b786d5c3ff35f2d7302d33b819740126b3119856dca",
+      "canonical_payload": {
+        "agent_id": "PR Agent",
+        "from_state": "78d3991d55969708482c3b786d5c3ff35f2d7302d33b819740126b3119856dca",
+        "to_state": "78d3991d55969708482c3b786d5c3ff35f2d7302d33b819740126b3119856dca",
+        "state_hash": "78d3991d55969708482c3b786d5c3ff35f2d7302d33b819740126b3119856dca",
+        "transition_timestamp": "2026-06-14T13:31:19Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "StateTransitionEvent",
+      "ledger_event_id": "16dcde111dce9ca155b0d35f01dbed48073a67c7ace95c7e143ce6ef1a04cc77",
+      "timestamp": "2026-06-14T13:31:19.536714+00:00",
+      "payload_hash": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+      "canonical_payload": {
+        "agent_id": "PR Agent",
+        "from_state": "78d3991d55969708482c3b786d5c3ff35f2d7302d33b819740126b3119856dca",
+        "to_state": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+        "state_hash": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+        "transition_timestamp": "2026-06-14T13:31:19Z",
+        "authorized_by": "agent"
+      }
+    },
+    {
+      "event_type": "STATE_TRANSITION",
+      "ledger_event_id": "0123df8b44bb10adf0fc7c820f684c9a1e8e678cb0c8553f9b1d874f27ff0270",
+      "timestamp": "2026-06-14T19:01:19.538660",
+      "payload_hash": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+      "canonical_payload": {
+        "agent_id": "PR Agent",
+        "event_type": "STATE_TRANSITION",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "next_state_hash": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+        "previous_state_hash": "776c41e98c406e28005c65e802355a9110f8469c8f861b7a216f83a2caf922c0"
+      }
+    },
+    {
+      "event_type": "PhaseAOracleResult",
+      "ledger_event_id": "9090e54dd34df82f1d33f058188fe45065390e1789db386aabb9736b7fd25a66",
+      "timestamp": "2026-06-14T13:31:19.543125+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "oracle_passed": true,
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "evaluation_timestamp": "2026-06-14T13:31:19Z",
+        "ledger_chain_valid": true,
+        "replay_valid": true,
+        "state_machine_valid": true,
+        "environment_snapshot_valid": true,
+        "no_post_failure_execution": true,
+        "no_orphan_events": true,
+        "schema_version_consistent": true,
+        "serialization_deterministic": true,
+        "no_unauthorized_state_mutation": true
+      }
+    },
+    {
+      "event_type": "PhaseAGuardResult",
+      "ledger_event_id": "9e3bda3e07f3c5cb9763f89e8551abc3b61f0f24515801dc488b30a0107fef01",
+      "timestamp": "2026-06-14T13:31:19.548070+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "passed": true,
+        "guard_timestamp": "2026-06-14T13:31:19Z",
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "replay_valid": true,
+        "environment_valid": true,
+        "ledger_integrity_valid": true,
+        "failure_lock_clear": true,
+        "state_hash_valid": true,
+        "llm_io_complete": true,
+        "tool_evidence_complete": true
+      }
+    },
+    {
+      "event_type": "ExecutionStateEvent",
+      "ledger_event_id": "fb37593c547ab31cfc910cc564c10e3336a01ad3512a005cb5ef6278b3fdafdd",
+      "timestamp": "2026-06-14T13:31:19.548070+00:00",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "execution_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+        "from_state": "CREATE_PR",
+        "to_state": "COMPLETED",
+        "transition_timestamp": "2026-06-14T13:31:19Z",
+        "authorized_by": "orchestrator"
+      }
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "3b66c3331eef46513155a3cf85296e2c8d88bf5b3154f022f24bcf34f2230297",
+      "timestamp": "2026-06-14T19:01:19.550436",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": [
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "init",
+          "timestamp": "2026-06-14T19:01:04.619452",
+          "to": "load_issue"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "load_issue",
+          "timestamp": "2026-06-14T19:01:05.636590",
+          "to": "index_repo"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "index_repo",
+          "timestamp": "2026-06-14T19:01:06.660501",
+          "to": "search_memory"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "search_memory",
+          "timestamp": "2026-06-14T19:01:07.682654",
+          "to": "hypothesize"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "hypothesize",
+          "timestamp": "2026-06-14T19:01:08.703334",
+          "to": "validate_rca"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "validate_rca",
+          "timestamp": "2026-06-14T19:01:09.727984",
+          "to": "generate_patch"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "generate_patch",
+          "timestamp": "2026-06-14T19:01:12.828038",
+          "to": "validate_patch"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "validate_patch",
+          "timestamp": "2026-06-14T19:01:13.849000",
+          "to": "security_scan"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "security_scan",
+          "timestamp": "2026-06-14T19:01:14.868766",
+          "to": "run_tests"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "run_tests",
+          "timestamp": "2026-06-14T19:01:16.277105",
+          "to": "evaluate_confidence"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "evaluate_confidence",
+          "timestamp": "2026-06-14T19:01:17.310570",
+          "to": "merge_decision"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "merge_decision",
+          "timestamp": "2026-06-14T19:01:18.339479",
+          "to": "create_pr"
+        },
+        {
+          "condition": null,
+          "duration_ms": null,
+          "error": null,
+          "from": "create_pr",
+          "timestamp": "2026-06-14T19:01:19.549427",
+          "to": "completed"
+        }
+      ]
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "e97e27b803ed628a9a242ab9e9549aa5035a39d3790fb11fa95b27ea78bcc0bd",
+      "timestamp": "2026-06-14T19:01:19.552606",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": [
+        {
+          "branch_name": "nexus/run_20260614_190104_ISSUE-999_b3dd16cc/iter-1",
+          "commit_hash": "3f59b274e43b53f1c2200be1d58076a82f2e18bc",
+          "iteration": 1,
+          "snapshot_id": "run_20260614_190104_ISSUE-999_b3dd16cc_iter_1",
+          "status": "committed"
+        }
+      ]
+    },
+    {
+      "event_type": null,
+      "ledger_event_id": "6da17211caaf21dde3a5e42a0729548b6ada9ad298a76502c1c5b28d550127cd",
+      "timestamp": "2026-06-14T19:01:19.554355",
+      "payload_hash": "UNKNOWN",
+      "canonical_payload": {
+        "circuit_breaker_tripped": false,
+        "cost_usd": {
+          "limit": "5.0",
+          "used": "0.0"
+        },
+        "elapsed_seconds": {
+          "limit": 600,
+          "used": "15.0"
+        },
+        "files_modified": {
+          "limit": 10,
+          "used": 0
+        },
+        "lines_changed": {
+          "limit": 500,
+          "used": 0
+        },
+        "patch_iterations": {
+          "limit": 3,
+          "used": 1
+        },
+        "tokens": {
+          "limit": 500000,
+          "used": 0
+        },
+        "trip_report": null
+      }
+    }
+  ]
+}

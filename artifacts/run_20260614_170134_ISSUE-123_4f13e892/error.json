@@ -1,0 +1,5 @@
+{
+  "type": "NameError",
+  "message": "name 'transition' is not defined",
+  "traceback": "Traceback (most recent call last):\n  File \"d:\\Japan\\backend\\orchestrator.py\", line 520, in run\n    transition(ExecutionState.LOAD_ISSUE)\n    ^^^^^^^^^^\nNameError: name 'transition' is not defined\n"
+}

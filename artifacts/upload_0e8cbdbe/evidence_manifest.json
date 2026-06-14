@@ -1,0 +1,13 @@
+{
+  "run_id": "upload_0e8cbdbe",
+  "finalized_at": "2026-06-14T20:54:45.849683",
+  "artifact_count": 1,
+  "final_evidence_root_hash": "b3925ad5309a19953939f07a77bffebec72547e3a5d39e8bd9692dbdf71c07e7",
+  "artifacts": {
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "manifest_sha256": "dde3212e9c2a0b2712bc37aa698565261a5934f6f97d6c7278ab5d739cc49dc9"
+}

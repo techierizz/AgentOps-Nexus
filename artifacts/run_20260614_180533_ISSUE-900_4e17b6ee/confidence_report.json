@@ -1,0 +1,14 @@
+{
+  "score": 100,
+  "risk": "Low",
+  "safety": "High",
+  "files_modified": 0,
+  "tests_passed": "5/5",
+  "factors": {
+    "test_pass_weight": 40,
+    "memory_retrieval_weight": 520,
+    "security_scan_weight": 20,
+    "modification_scope_weight": 10,
+    "system_certainty_weight": 10
+  }
+}

@@ -1,0 +1,10 @@
+[
+  {
+    "from": "init",
+    "to": "failed",
+    "condition": "forced_failure",
+    "timestamp": "2026-06-14T17:01:33.059910",
+    "duration_ms": null,
+    "error": "name 'transition' is not defined"
+  }
+]

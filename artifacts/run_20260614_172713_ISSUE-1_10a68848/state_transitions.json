@@ -1,0 +1,50 @@
+[
+  {
+    "from": "init",
+    "to": "load_issue",
+    "condition": null,
+    "timestamp": "2026-06-14T17:27:13.326756",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "load_issue",
+    "to": "index_repo",
+    "condition": null,
+    "timestamp": "2026-06-14T17:27:14.344373",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "index_repo",
+    "to": "search_memory",
+    "condition": null,
+    "timestamp": "2026-06-14T17:27:15.368040",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "search_memory",
+    "to": "hypothesize",
+    "condition": null,
+    "timestamp": "2026-06-14T17:27:16.384435",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "hypothesize",
+    "to": "validate_rca",
+    "condition": null,
+    "timestamp": "2026-06-14T17:27:17.400256",
+    "duration_ms": null,
+    "error": null
+  },
+  {
+    "from": "validate_rca",
+    "to": "failed",
+    "condition": "forced_failure",
+    "timestamp": "2026-06-14T17:27:18.413773",
+    "duration_ms": null,
+    "error": "('float is not permitted \u2014 use Decimal with fixed precision', 'float', 'run_20260614_172713_ISSUE-1_10a68848')"
+  }
+]

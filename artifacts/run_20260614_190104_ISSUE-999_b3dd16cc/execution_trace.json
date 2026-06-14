@@ -1,0 +1,90 @@
+{
+  "execution_sequence": [
+    {
+      "agent_id": "Issue Agent",
+      "payload_hash": "290eb3a9a92b11593a613f28d2a107183cb6ea44915b87f9f2d9b4d38deb4ec1",
+      "ledger_event_id": "138a9c50cb84d341dd7b4abb2ae399a87c3ea451bc49863cefa85816a950c1f0",
+      "timestamp": "2026-06-14T19:01:05.629557",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Repository Intel Agent",
+      "payload_hash": "4e8d7dd505c57c5631b50fbc6b15a498f6a5de6f9fba1efe0eb64e2851f9edf8",
+      "ledger_event_id": "549986562c5b23d237e71a057926a0789a6a965c447701321775016ad171db16",
+      "timestamp": "2026-06-14T19:01:06.652515",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Memory Agent",
+      "payload_hash": "c353f8543ef6f751aad23d5a841de235a23e8f31f372d389b23a469dbcc680a0",
+      "ledger_event_id": "40d0bc5cd5042f9673b16efc50374a3c10b7808fa5ac43bde51385514d5a0f63",
+      "timestamp": "2026-06-14T19:01:07.677042",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Hypothesis Agent",
+      "payload_hash": "70a7b961456c541d07e9c33cf5e05551b66fb950f2c352a13bac7b720082a02e",
+      "ledger_event_id": "06ca0dcb0595010f6536b7b65877416cf66cf31a3b8713db289b47b987532657",
+      "timestamp": "2026-06-14T19:01:08.695640",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Root Cause Agent",
+      "payload_hash": "f16fe4f6ec932e26351af167a4ae89ce7cffdfdbc49d7581f5d9dae03846a2e0",
+      "ledger_event_id": "720ea14cb713556ea408319029aabca74e2577dfb32a8f0b7eafbd193ea1e142",
+      "timestamp": "2026-06-14T19:01:09.720923",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Patch Agent",
+      "payload_hash": "8ea19a8aa5ae7e0d084545924e04a3a8f394731dd3b248fe0a81b8d158391d67",
+      "ledger_event_id": "496cd789a2a19d530c9728a6e4f6c0da975bf40bc5fd2e5ab9b469603bba6e4e",
+      "timestamp": "2026-06-14T19:01:11.821430",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Patch Validation Agent",
+      "payload_hash": "d813376de9e46db0a20e73f245b9fc5e33aff453cfb484320a3408a7f6f09718",
+      "ledger_event_id": "6f19af5a3dd979be8bbf5e541bceb1210644c2c4860fbda24d5ebc714a3c1a96",
+      "timestamp": "2026-06-14T19:01:13.838830",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Security Agent",
+      "payload_hash": "34707610b89b844aa82ded00771103681b8023bfbc2db66b88ff95accde5da6f",
+      "ledger_event_id": "fd66e3b0ea60a63f0101f106240012330c4be24e8054b3bce326142cc491481e",
+      "timestamp": "2026-06-14T19:01:14.860681",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Testing Agent",
+      "payload_hash": "ad17047500233b58ab4a968c41af3c4b8db2bab5719c2f8a91687ccc08036231",
+      "ledger_event_id": "f4a9d63e482861b56534f8ef323b3016a58a59735f02b58d6c48e94ec72994dc",
+      "timestamp": "2026-06-14T19:01:15.882849",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Confidence Agent",
+      "payload_hash": "9e881544221a582b43e30141d45ec889862abf1ab42a3532907001e334560cce",
+      "ledger_event_id": "e85c29ab1a7da6a62e4102daa3b612f38cbabad76d78c0e4760c6993276d2c36",
+      "timestamp": "2026-06-14T19:01:17.299754",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "Merge Governor",
+      "payload_hash": "804ce769ae342ed5827f37a9da554d77c4e8c488e7c7f8642ee8ba06b25e0daf",
+      "ledger_event_id": "6b4989d3843810b6a46ce420eed8059e3f57848f26bd30b1144508278e71f1b6",
+      "timestamp": "2026-06-14T19:01:18.328084",
+      "shadow_mode": false
+    },
+    {
+      "agent_id": "PR Agent",
+      "payload_hash": "ebd810b528c36735016a4ba928b1bea87c5fc07612e61fcc43aa7ebf3d1d1797",
+      "ledger_event_id": "0123df8b44bb10adf0fc7c820f684c9a1e8e678cb0c8553f9b1d874f27ff0270",
+      "timestamp": "2026-06-14T19:01:19.538660",
+      "shadow_mode": false
+    }
+  ],
+  "total_steps": 12,
+  "run_id": "run_20260614_190104_ISSUE-999_b3dd16cc"
+}

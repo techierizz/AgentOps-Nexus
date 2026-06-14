@@ -1,0 +1,7 @@
+{
+  "issue_id": "ISSUE-999",
+  "title": "CI Determinism Test",
+  "description": "Determinism verification",
+  "error_type": "Generic Bug",
+  "suspected_files": []
+}

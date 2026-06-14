@@ -1,0 +1,8 @@
+{
+  "passed": true,
+  "passed_count": 2,
+  "failed_count": 0,
+  "total_count": 2,
+  "log": "============================= test session starts =============================\nplatform win32 -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0 -- C:\\Users\\Asus\\AppData\\Local\\Programs\\Python\\Python312\\python.exe\ncachedir: .pytest_cache\nrootdir: D:\\Japan\\demo_target_repo\nplugins: anyio-4.3.0\ncollecting ... collected 4 items / 2 deselected / 2 selected\n\ntest_payment.py::test_successful_checkout PASSED                         [ 50%]\ntest_payment.py::test_zero_items_division PASSED                         [100%]\n\n======================= 2 passed, 2 deselected in 0.04s =======================\n\n",
+  "coverage": 95
+}

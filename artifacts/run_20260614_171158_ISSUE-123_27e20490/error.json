@@ -1,0 +1,5 @@
+{
+  "type": "PhaseAGuardFailed",
+  "message": "Phase A Guard Violation: ledger_integrity_valid",
+  "traceback": "Traceback (most recent call last):\n  File \"D:\\Japan\\backend\\orchestrator.py\", line 538, in run\n    transition(ExecutionState.LOAD_ISSUE)\n  File \"D:\\Japan\\backend\\orchestrator.py\", line 527, in transition\n    return advance_step(target.value, target)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"D:\\Japan\\backend\\orchestrator.py\", line 493, in advance_step\n    GLOBAL_PHASE_A_GUARD(\n  File \"D:\\Japan\\backend\\orchestrator.py\", line 208, in GLOBAL_PHASE_A_GUARD\n    raise PhaseAGuardFailed(\nbackend.orchestrator.PhaseAGuardFailed: Phase A Guard Violation: ledger_integrity_valid\n"
+}

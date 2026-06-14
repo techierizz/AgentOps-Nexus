@@ -1,0 +1,7 @@
+{
+  "issue_id": "ISSUE-999",
+  "title": "test title",
+  "description": "test desc",
+  "error_type": "Generic Bug",
+  "suspected_files": []
+}

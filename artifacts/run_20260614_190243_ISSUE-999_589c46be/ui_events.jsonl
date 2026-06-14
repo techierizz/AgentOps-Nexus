@@ -1,0 +1,12 @@
+{"event_type": "PIPELINE_STEP", "agent_id": "Issue Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "f7df1f98f6093eb10455597c93a6124e201857650c8d25c3d85cfd20d0989aad"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Repository Intel Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "381f0d4044dec2f8c77e8deb082e96de1c0d8a5dacbd84fdbaa9dad8a2b9b339"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Memory Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "448bdb974156788d8dda32f763ec0ed99497fac57a30b24ea5f36acaa58f6071"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Hypothesis Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "a408e51fea5074226044366d3e8ae558b15be295bc6bafb491f563f5c7372006"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Root Cause Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "5b40b31120431c0f14e4d902117e6dfc8cd95561677cc3a070430b9a6651a61d"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Patch Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "d79c93b742d0af2e2aca412127092215f7c75290010c371dfa38965a0873ae56"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Patch Validation Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "56177c720b709afe8fac0ae358bcc5dbfe69df4fe0d3148ad80c4f7b463c370a"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Security Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "9a51455a70eafc438f9030c3f54d5a2db9b948c16ee95b8c62ca3684d1b4d38b"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Testing Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "d3697d844946e8b7fdf92779455bcf02db58839cef357dfacebd702522a4c315"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Confidence Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "13c1370f8e6f55e21f072b1bd8f580898fac70dfd3f868b822927b1a1be2da49"}
+{"event_type": "PIPELINE_STEP", "agent_id": "Merge Governor", "status": "TRANSITION", "shadow_mode": false, "derived_from": "9d070bf6947739ae6d510dab76170bc248afc83973bc6b64facd24b5231fa7b3"}
+{"event_type": "PIPELINE_STEP", "agent_id": "PR Agent", "status": "TRANSITION", "shadow_mode": false, "derived_from": "ae81fa9ef6950372cbfae00ecd952792d6617f4e77183f3f34c18734ea618bfb"}

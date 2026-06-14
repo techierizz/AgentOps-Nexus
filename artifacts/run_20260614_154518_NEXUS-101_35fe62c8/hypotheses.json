@@ -1,0 +1,26 @@
+[
+  {
+    "id": "H1",
+    "description": "ZeroDivisionError in payment_processor.py during fee calculation due to empty cart (total_items = 0)",
+    "confidence": 0.95,
+    "reasoning": "The stack trace and issue describe a ZeroDivisionError. Analyzing payment_processor.py shows a line where total_amount is divided by total_items. An empty cart or free product order with items=0 triggers this division by zero.",
+    "target_file": "payment_processor.py",
+    "validation_status": "pending"
+  },
+  {
+    "id": "H2",
+    "description": "ZeroDivisionError in test cases mock framework due to uninitialized order weights",
+    "confidence": 0.4,
+    "reasoning": "A test setup might be injecting a 0 value when building mock orders for testing, but payment_processor.py should still guard against it.",
+    "target_file": "test_payment.py",
+    "validation_status": "pending"
+  },
+  {
+    "id": "H3",
+    "description": "Decimal round-off precision error causing total_items count to cast to 0",
+    "confidence": 0.25,
+    "reasoning": "If total_items is loaded as a float discount percentage instead of integer item count, casting might drop the value to 0.",
+    "target_file": "payment_processor.py",
+    "validation_status": "pending"
+  }
+]

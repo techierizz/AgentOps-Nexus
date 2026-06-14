@@ -1,0 +1,5 @@
+{
+  "decision": "auto_approve",
+  "reason": "100% tests passed, security check passed, and confidence score is above 90% threshold.",
+  "failure_report": ""
+}

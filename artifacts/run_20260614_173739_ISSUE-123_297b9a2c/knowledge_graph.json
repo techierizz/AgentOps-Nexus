@@ -1,0 +1,30 @@
+{
+  "nodes": [
+    {
+      "id": "math.py",
+      "label": "math.py",
+      "type": "file",
+      "properties": {
+        "path": "math.py",
+        "size": 36
+      }
+    },
+    {
+      "id": "math.py::calc",
+      "label": "calc",
+      "type": "function",
+      "properties": {
+        "file": "math.py",
+        "class": null,
+        "args": []
+      }
+    }
+  ],
+  "edges": [
+    {
+      "source": "math.py::calc",
+      "target": "math.py",
+      "type": "contains_function"
+    }
+  ]
+}

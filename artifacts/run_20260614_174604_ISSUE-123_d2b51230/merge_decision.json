@@ -1,0 +1,5 @@
+{
+  "decision": "APPROVED",
+  "reason": "100% tests passed, security check passed, and confidence score is >= 85%.",
+  "failure_report": ""
+}

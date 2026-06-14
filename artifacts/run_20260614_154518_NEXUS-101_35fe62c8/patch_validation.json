@@ -1,0 +1,15 @@
+{
+  "syntax_valid": true,
+  "structural_valid": true,
+  "unexpected_changes": false,
+  "files_changed": 1,
+  "lines_added": 1,
+  "lines_deleted": 1,
+  "high_risk_files": [
+    "payment_processor.py"
+  ],
+  "complexity_delta": 0,
+  "risk_score": 10,
+  "approval": "SAFE_TO_TEST",
+  "details": "High-risk file modified: payment_processor.py (pattern: payment)"
+}

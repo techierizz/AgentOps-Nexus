@@ -1,0 +1,11 @@
+{
+  "status": "RCA_CONFLICT_DETECTED",
+  "issue_id": "ISSUE-900",
+  "origin_issue": "Fix something",
+  "selected_hypothesis": "None - Validation Mismatch",
+  "hypothesis_confidence": 0,
+  "evidence": [
+    "No hypothesis could be validated against codebase files."
+  ],
+  "root_cause": "Validation Conflict: Evidence chain broken"
+}

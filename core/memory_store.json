@@ -1,0 +1,41 @@
+[
+  {
+    "id": "HIST-101",
+    "content": "ZeroDivisionError in discount calculator: total items is zero, throws division by zero.",
+    "metadata": {
+      "issue_title": "ZeroDivisionError in discount calculator",
+      "root_cause": "Division by zero when item count is 0 in discount.py",
+      "patch_summary": "Add safe check if item_count == 0 return 0",
+      "files_changed": [
+        "discount.py"
+      ],
+      "confidence_score": 95
+    }
+  },
+  {
+    "id": "HIST-102",
+    "content": "ImportError in dynamic stripe connector: Stripe module failed to load dynamically.",
+    "metadata": {
+      "issue_title": "ImportError in dynamic stripe connector",
+      "root_cause": "Stripe SDK name mismatch when importing dynamically in stripe_client.py",
+      "patch_summary": "Catch ImportError and fallback to stripe mock or correct string import name",
+      "files_changed": [
+        "stripe_client.py"
+      ],
+      "confidence_score": 88
+    }
+  },
+  {
+    "id": "HIST-103",
+    "content": "TypeError in coupon handler: None value passed when loading discount dictionary.",
+    "metadata": {
+      "issue_title": "TypeError in coupon handler",
+      "root_cause": "Null value passed into dict lookup without default fallback in coupons.py",
+      "patch_summary": "Use .get() with default dictionary values",
+      "files_changed": [
+        "coupons.py"
+      ],
+      "confidence_score": 92
+    }
+  }
+]

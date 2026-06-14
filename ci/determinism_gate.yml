@@ -1,0 +1,37 @@
+name: Determinism CI Gate
+
+on:
+  pull_request:
+    branches:
+      - main
+      - release/*
+  workflow_dispatch:
+
+jobs:
+  determinism_check:
+    name: 100x Replay Determinism Verification
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Install Dependencies
+        run: |
+          pip install -r requirements.txt
+          pip install pytest
+
+      - name: Run Determinism Verification Gate
+        run: |
+          python tests/ci_determinism_gate.py
+        env:
+          PYTHONPATH: ${{ github.workspace }}
+
+      - name: Finalize CI Gate
+        run: |
+          echo "[CI_GATE] hash consistency verified"

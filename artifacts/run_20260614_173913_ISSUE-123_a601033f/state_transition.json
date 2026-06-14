@@ -1,0 +1,7 @@
+{
+  "event_type": "STATE_TRANSITION",
+  "previous_state_hash": "60bd33880036110db6d32ff595314dadd6ae0196520051a7fd95e68988a07160",
+  "next_state_hash": "f28e2f4aab91f87cdfc0d2c16c9ad2eff235b9600638f33e5e9b487c635294eb",
+  "agent_id": "PR Agent",
+  "execution_id": "run_20260614_173913_ISSUE-123_a601033f"
+}

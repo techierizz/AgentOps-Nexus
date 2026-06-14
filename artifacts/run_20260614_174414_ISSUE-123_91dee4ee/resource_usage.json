@@ -1,0 +1,28 @@
+{
+  "tokens": {
+    "used": 0,
+    "limit": 500000
+  },
+  "cost_usd": {
+    "used": "0.0",
+    "limit": "5.0"
+  },
+  "elapsed_seconds": {
+    "used": "15.4",
+    "limit": 600
+  },
+  "files_modified": {
+    "used": 0,
+    "limit": 10
+  },
+  "lines_changed": {
+    "used": 0,
+    "limit": 500
+  },
+  "patch_iterations": {
+    "used": 1,
+    "limit": 3
+  },
+  "circuit_breaker_tripped": false,
+  "trip_report": null
+}

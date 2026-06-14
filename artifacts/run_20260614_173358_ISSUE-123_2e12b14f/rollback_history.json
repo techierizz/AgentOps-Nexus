@@ -1,0 +1,9 @@
+[
+  {
+    "snapshot_id": "run_20260614_173358_ISSUE-123_2e12b14f_iter_1",
+    "iteration": 1,
+    "commit_hash": "2376a8157f5619c3c72ba1dddef054bf1c3f0725",
+    "branch_name": "nexus/run_20260614_173358_ISSUE-123_2e12b14f/iter-1",
+    "status": "committed"
+  }
+]

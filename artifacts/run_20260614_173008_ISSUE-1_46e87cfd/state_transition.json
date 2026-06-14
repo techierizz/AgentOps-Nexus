@@ -1,0 +1,7 @@
+{
+  "event_type": "STATE_TRANSITION",
+  "previous_state_hash": "9c801d4bd894dd72e8ff1689342b87b57abe3030469ccf011c686b08416b55a3",
+  "next_state_hash": "873a620a5755afc47bc7909e03c1466840839df13c4fd4326d678b4c4e076646",
+  "agent_id": "Repository Intel Agent",
+  "execution_id": "run_20260614_173008_ISSUE-1_46e87cfd"
+}

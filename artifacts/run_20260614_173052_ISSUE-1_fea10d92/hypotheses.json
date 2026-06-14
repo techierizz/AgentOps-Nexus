@@ -1,0 +1,10 @@
+[
+  {
+    "id": "H1",
+    "description": "Generic logic fault in payment_processor.py logic blocks",
+    "confidence": 70,
+    "reasoning": "Based on general codebase layout, logic handlers in payment_processor contain the core calculation code.",
+    "target_file": "payment_processor.py",
+    "validation_status": "pending"
+  }
+]

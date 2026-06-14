@@ -1,0 +1,45 @@
+{
+  "run_id": "run_20260614_173008_ISSUE-1_46e87cfd",
+  "finalized_at": "2026-06-14T17:30:11.387033",
+  "artifact_count": 9,
+  "final_evidence_root_hash": "a24673f191c79d6943e6521ca4603b90598e4ea88de0790802b57d9cd88634c2",
+  "artifacts": {
+    "issue": {
+      "path": "issue.json",
+      "sha256": "2095766b3c5ccaf59b63032b614e123e6a23e762f0887babc875d7ffedd85a2c"
+    },
+    "state_transition": {
+      "path": "state_transition.json",
+      "sha256": "f11f038f30c1dd6353e3b5a7825e8a496cd43fec43a23a86099d7477254c6cee"
+    },
+    "environment_fingerprint": {
+      "path": "environment_fingerprint.json",
+      "sha256": "8c2e90e9b88bd0e26da39d5a7108fdf12489214618c90d3efde3f841a1b93d36"
+    },
+    "knowledge_graph": {
+      "path": "knowledge_graph.json",
+      "sha256": "25e8f69d61e823f90289d693bb41461a995e4e5a4e24352e624c8cce9a571c83"
+    },
+    "error": {
+      "path": "error.json",
+      "sha256": "2c9f6b7e604616df44750073f4386beaf09d03079e9eb10b30c23243df09eea6"
+    },
+    "state_transitions": {
+      "path": "state_transitions.json",
+      "sha256": "bc3f57004c2336c7676c8bfcbddc198b548dc384d698556ec2bfb67af577090f"
+    },
+    "rollback_history": {
+      "path": "rollback_history.json",
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "resource_usage": {
+      "path": "resource_usage.json",
+      "sha256": "5c82a72555d5a9f8a3324a8fa2ac8713a3ed335eac4acbbdcfe74003eaab9d88"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "e540908d696293a8bc4624a5c9b3f20aae9386459fb76828b954bb10273fbf32"
+    }
+  },
+  "manifest_sha256": "1780d0d70dcb2cb4e4240b716bdbe5a5c204734d26349108932c61a85338a70d"
+}

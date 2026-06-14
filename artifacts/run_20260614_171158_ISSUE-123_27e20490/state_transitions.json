@@ -1,0 +1,10 @@
+[
+  {
+    "from": "init",
+    "to": "failed",
+    "condition": "forced_failure",
+    "timestamp": "2026-06-14T17:11:58.299132",
+    "duration_ms": null,
+    "error": "Phase A Guard Violation: ledger_integrity_valid"
+  }
+]

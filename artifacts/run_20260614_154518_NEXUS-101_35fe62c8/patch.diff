@@ -1,0 +1,11 @@
+--- a/payment_processor.py
++++ b/payment_processor.py
+@@ -18,7 +18,7 @@
+         # Bug 1: ZeroDivisionError
+         # When order total is zero (e.g. free product promotions), total_items is 0.
+         # This division throws a ZeroDivisionError.
+-        fee_per_item = total_fee / total_items
++        fee_per_item = total_fee / total_items if total_items > 0 else 0
+         return fee_per_item
+ 
+     def apply_discount(self, code: str) -> float:

@@ -1,0 +1,7 @@
+{
+  "event_type": "STATE_TRANSITION",
+  "previous_state_hash": "08648ac9f32455bd7c74ee6e836b0354f9b55b84d47f3ab6369600cf3bec953f",
+  "next_state_hash": "bf037619e1425f0b1fcc177fe6c69e0ebf9e4219aa1cfeb9c7fe4e56df91f833",
+  "agent_id": "Hypothesis Agent",
+  "execution_id": "run_20260614_172713_ISSUE-1_10a68848"
+}

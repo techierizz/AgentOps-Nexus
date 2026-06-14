@@ -1,0 +1,9 @@
+{
+  "issue_id": "NEXUS-101",
+  "title": "ZeroDivisionError in calculate_fees() on checkout",
+  "description": "When checkout occurs for free promotional items (where total cost and cart items are 0), the system crashes with a ZeroDivisionError. Stack trace:\n\n```python\nTraceback (most recent call last):\n  File \"test_payment.py\", line 15, in test_zero_items_division\n    res = processor.process_order(0.0, 0)\n  File \"payment_processor.py\", line 45, in process_order\n    fee = self.calculate_fees(5.0, items)\n  File \"payment_processor.py\", line 21, in calculate_fees\n    fee_per_item = total_fee / total_items\nZeroDivisionError: division by zero\n```",
+  "error_type": "ZeroDivisionError",
+  "suspected_files": [
+    "payment_processor.py"
+  ]
+}

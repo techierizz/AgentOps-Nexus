@@ -1,0 +1,69 @@
+{
+  "run_id": "run_20260614_190104_ISSUE-999_b3dd16cc",
+  "finalized_at": "2026-06-14T19:01:19.560122",
+  "artifact_count": 15,
+  "final_evidence_root_hash": "6da17211caaf21dde3a5e42a0729548b6ada9ad298a76502c1c5b28d550127cd",
+  "artifacts": {
+    "issue": {
+      "path": "issue.json",
+      "sha256": "1f3d12c9f5657d095ad6386a45836d56330da6a42c59d2b7a83623cd5d36a8f6"
+    },
+    "state_transition": {
+      "path": "state_transition.json",
+      "sha256": "7fb29b11fd39916347a91c88ff25d04283a5ea3707a5645deb6583e570a2dd82"
+    },
+    "environment_fingerprint": {
+      "path": "environment_fingerprint.json",
+      "sha256": "8c2e90e9b88bd0e26da39d5a7108fdf12489214618c90d3efde3f841a1b93d36"
+    },
+    "knowledge_graph": {
+      "path": "knowledge_graph.json",
+      "sha256": "25e8f69d61e823f90289d693bb41461a995e4e5a4e24352e624c8cce9a571c83"
+    },
+    "hypotheses": {
+      "path": "hypotheses.json",
+      "sha256": "dcc1ec42e37e92a68e63d80e0e3dd8418e498abc9c0aa949af28fac144d1fa26"
+    },
+    "rca_report": {
+      "path": "rca_report.json",
+      "sha256": "8fe5240dad1834a7bcdf4fa8ce065fb53684e4ee6c50736d740e814a07dd63fb"
+    },
+    "patch_validation": {
+      "path": "patch_validation.json",
+      "sha256": "d3d0911538324662376f69e36d3b7d24a5f151f458282f77920b1e55199741d2"
+    },
+    "security_report": {
+      "path": "security_report.json",
+      "sha256": "9e8ebc0336c04a9833e8b0243ab5eecc4056b544972a57c4c4c40853cc10fb71"
+    },
+    "test_results": {
+      "path": "test_results.json",
+      "sha256": "20074bac6daab252e9574819c978a5259f732936a743bf9ee8bb737eed3c6e26"
+    },
+    "confidence_report": {
+      "path": "confidence_report.json",
+      "sha256": "b0565367ad7669782904f0c811fa4df6c0b9f780d72e2cb8845e3322a086d994"
+    },
+    "merge_decision": {
+      "path": "merge_decision.json",
+      "sha256": "c9846a605bb344873e4d467746101a8cb4bd35ecc2cf2913e0f1b519b3bb3d3f"
+    },
+    "state_transitions": {
+      "path": "state_transitions.json",
+      "sha256": "ba4908b0bd1e7490b9efc69c10a8c13d6670967a7f8ab264a0c2431deed36ec2"
+    },
+    "rollback_history": {
+      "path": "rollback_history.json",
+      "sha256": "1881bdd5acc0103df346de0e1d653793c9b779aa78852903f626e8cb7d6ad911"
+    },
+    "resource_usage": {
+      "path": "resource_usage.json",
+      "sha256": "495d256ee06513d3fa25f42e5b007db866b02d64e2dab3e9a93e2324d263a692"
+    },
+    "execution_logs": {
+      "path": "execution_logs.txt",
+      "sha256": "562ce4dfdde0dd2a8e1af1c2f5afb148c6d4bfe997896a4ba83cbe4c4362d7c7"
+    }
+  },
+  "manifest_sha256": "0c26fd6251100f2bb2892bafe90f077f9ccc26b2f7e00726ec56ca3c1097a8d9"
+}

@@ -1,0 +1,13 @@
+{
+  "syntax_valid": true,
+  "structural_valid": true,
+  "unexpected_changes": false,
+  "files_changed": 0,
+  "lines_added": 0,
+  "lines_deleted": 0,
+  "high_risk_files": [],
+  "complexity_delta": 0,
+  "risk_score": 0,
+  "approval": "SAFE_TO_TEST",
+  "details": "No patches to validate."
+}

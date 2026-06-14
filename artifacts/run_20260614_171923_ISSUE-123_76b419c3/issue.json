@@ -1,0 +1,6 @@
+{
+  "issue_id": "ISSUE-123",
+  "title": "Fix division by zero",
+  "description": "The math.py file crashes with a ```ZeroDivisionError: division by zero``` traceback.",
+  "repo_path": "d:\\Japan\\artifacts\\dummy_repo"
+}
