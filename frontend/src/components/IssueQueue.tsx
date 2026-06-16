@@ -9,7 +9,7 @@ interface IssueQueueProps {
   onSelectIssue: (id: string) => void;
   onRunAgent: (id: string) => void;
   onUploadProject: (file: File) => void;
-  status: 'idle' | 'running' | 'completed' | 'failed';
+  status: 'idle' | 'running' | 'completed' | 'failed' | 'rca_conflict_detected';
 }
 
 export const IssueQueue: React.FC<IssueQueueProps> = ({

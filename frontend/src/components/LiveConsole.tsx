@@ -5,7 +5,7 @@ import type { LogMessage } from '../types';
 
 interface LiveConsoleProps {
   logs: LogMessage[];
-  status: 'idle' | 'running' | 'completed' | 'failed';
+  status: 'idle' | 'running' | 'completed' | 'failed' | 'rca_conflict_detected';
 }
 
 const ALL_AGENTS = [

@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, RefreshCw, ShieldCheck } from 'lucide-react';
+import { Bot, RefreshCw } from 'lucide-react';
 import type { SystemCapabilities } from '../types';
 
 interface HeaderProps {

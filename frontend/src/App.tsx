@@ -39,7 +39,7 @@ const App: React.FC = () => {
     logs: [],
     iteration: 1,
     max_iterations: 3
-  });
+  } as unknown as AgentState);
 
   const [systemHealth, setSystemHealth] = useState<SystemCapabilities | null>(null);
 
@@ -109,7 +109,7 @@ const App: React.FC = () => {
           logs: [],
           iteration: 1,
           max_iterations: 3
-        });
+        } as unknown as AgentState);
         alert("Demo target repository successfully reset to its buggy state.");
       }
     } catch (e) {
@@ -145,9 +145,8 @@ const App: React.FC = () => {
           ...prev,
           status: 'completed',
           rca_report: { 
-            error_type: analyzeData.risk_level, 
-            stack_trace: "", 
-            suspected_files: analyzeData.files_affected 
+            impact: analyzeData.risk_level, 
+            affected_component: (analyzeData.files_affected || []).join(', ')
           },
           logs: [
             ...prev.logs,
@@ -248,9 +247,8 @@ const App: React.FC = () => {
         ...state,
         status: 'completed',
         rca_report: { 
-          error_type: analyzeData.risk_level, 
-          stack_trace: "", 
-          suspected_files: analyzeData.files_affected 
+          impact: analyzeData.risk_level, 
+          affected_component: (analyzeData.files_affected || []).join(', ')
         },
         logs: [
           { timestamp: new Date().toISOString(), level: 'info', agent: 'System', message: `Analysis complete. Found ${analyzeData.bugs?.length || 0} potential issues.` },

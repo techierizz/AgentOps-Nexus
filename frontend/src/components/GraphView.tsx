@@ -1,11 +1,11 @@
 import React, { useMemo } from 'react';
-import { Network, File, ShieldAlert } from 'lucide-react';
+import { Network, ShieldAlert } from 'lucide-react';
 import type { KnowledgeGraph, RCAReport } from '../types';
 
 interface GraphViewProps {
   graph: KnowledgeGraph;
   rca: RCAReport;
-  status: 'idle' | 'running' | 'completed' | 'failed';
+  status: 'idle' | 'running' | 'completed' | 'failed' | 'rca_conflict_detected';
 }
 
 export const GraphView: React.FC<GraphViewProps> = ({ graph, rca }) => {
