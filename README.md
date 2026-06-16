@@ -150,7 +150,7 @@ Validate password hashes before issuing tokens.
 
 Supports:
 
-- ZIP Project Uploads
+- ZIP Project Uploads (in devewlopment due to training of agents)
 - Recursive File Discovery
 - Static Analysis
 - Deterministic Event Generation
