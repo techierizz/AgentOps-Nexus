@@ -10,7 +10,8 @@ import { AutonomousDecisionCenter } from './components/AutonomousDecisionCenter'
 import { PRCenter } from './components/PRCenter';
 import type { AgentState, Issue, SystemCapabilities } from './types';
 
-const API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+const RAW_API_BASE = import.meta.env.VITE_API_URL || 'http://localhost:8000/api/v1';
+const API_BASE = RAW_API_BASE.replace(/\/$/, '');
 
 const App: React.FC = () => {
   const [issues, setIssues] = useState<Issue[]>([]);
@@ -64,10 +65,19 @@ const App: React.FC = () => {
   const fetchIssues = async () => {
     try {
       const res = await fetch(`${API_BASE}/issues`);
-      const data = await res.json();
-      setIssues(data);
-      if (data.length > 0) {
-        setSelectedIssueId(data[0].id);
+      if (res.ok) {
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          setIssues(data);
+          if (data.length > 0) {
+            setSelectedIssueId(data[0].id);
+          }
+        } else {
+          console.error("Expected array of issues but got:", data);
+          setIssues([]);
+        }
+      } else {
+        console.error(`Failed to load issues: ${res.status} ${res.statusText}`);
       }
     } catch (e) {
       console.error("Failed to load issues:", e);
