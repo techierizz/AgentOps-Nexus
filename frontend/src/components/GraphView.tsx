@@ -1,5 +1,5 @@
 import React, { useMemo } from 'react';
-import { Network, File, Box, ShieldAlert, Zap } from 'lucide-react';
+import { Network, File, ShieldAlert } from 'lucide-react';
 import type { KnowledgeGraph, RCAReport } from '../types';
 
 interface GraphViewProps {
@@ -8,7 +8,7 @@ interface GraphViewProps {
   status: 'idle' | 'running' | 'completed' | 'failed';
 }
 
-export const GraphView: React.FC<GraphViewProps> = ({ graph, rca, status }) => {
+export const GraphView: React.FC<GraphViewProps> = ({ graph, rca }) => {
   // We structure the nodes into columns: File, Class, Function
   const layout = useMemo(() => {
     if (!graph.nodes || graph.nodes.length === 0) return { nodes: [], edges: [] };
@@ -18,7 +18,6 @@ export const GraphView: React.FC<GraphViewProps> = ({ graph, rca, status }) => {
     const classes = graph.nodes.filter(n => n.type === 'class');
     const functions = graph.nodes.filter(n => n.type === 'function');
 
-    const width = 800;
     const height = 300;
 
     const coords: Record<string, { x: number; y: number }> = {};
@@ -161,27 +160,21 @@ export const GraphView: React.FC<GraphViewProps> = ({ graph, rca, status }) => {
               // Styles based on types and culprit status
               let fillColor = '#13111C';
               let strokeColor = '#26213A';
-              let textGlow = '';
-              let Icon = File;
 
               if (node.type === 'file') {
                 fillColor = '#10B981';
                 strokeColor = '#34D399';
-                Icon = File;
               } else if (node.type === 'class') {
                 fillColor = '#8B5CF6';
                 strokeColor = '#A78BFA';
-                Icon = Box;
               } else if (node.type === 'function') {
                 fillColor = '#3B82F6';
                 strokeColor = '#60A5FA';
-                Icon = Zap;
               }
 
               if (isCulprit) {
                 fillColor = '#EF4444';
                 strokeColor = '#F87171';
-                textGlow = 'glow-text-red';
               }
 
               return (

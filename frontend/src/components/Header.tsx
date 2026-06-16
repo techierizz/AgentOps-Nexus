@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Bot, RefreshCw, Layers, ShieldCheck, Activity } from 'lucide-react';
+import { Bot, RefreshCw, ShieldCheck } from 'lucide-react';
 import type { SystemCapabilities } from '../types';
 
 interface HeaderProps {
@@ -80,7 +80,7 @@ export const Header: React.FC<HeaderProps> = ({
       <motion.header 
         initial={{ y: -20, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ type: "spring", stiffness: 100 }}
+        transition={{ type: "spring" as const, stiffness: 100 }}
         className="glass-panel px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4 glow-purple"
       >
       <div className="flex items-center gap-3">

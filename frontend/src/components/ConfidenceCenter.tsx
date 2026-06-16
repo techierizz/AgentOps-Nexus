@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ShieldCheck, HelpCircle, Check, AlertTriangle, AlertOctagon } from 'lucide-react';
+import { ShieldCheck, HelpCircle, AlertTriangle, AlertOctagon } from 'lucide-react';
 import type { ConfidenceReport, SecurityReport, TestResults } from '../types';
 
 interface ConfidenceCenterProps {
@@ -21,7 +21,6 @@ export const ConfidenceCenter: React.FC<ConfidenceCenterProps> = ({
   const score = confidence?.score || 0;
   const risk = confidence?.risk || 'N/A';
   const safety = confidence?.safety || 'N/A';
-  const modifiedCount = confidence?.files_modified || 0;
 
   const getScoreColor = (val: number) => {
     if (val >= 85) return 'text-accentGreen';

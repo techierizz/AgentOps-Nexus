@@ -276,7 +276,7 @@ const App: React.FC = () => {
 
   const itemVariants = {
     hidden: { opacity: 0, y: 40, scale: 0.95 },
-    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring", stiffness: 60, damping: 12 } }
+    show: { opacity: 1, y: 0, scale: 1, transition: { type: "spring" as const, stiffness: 60, damping: 12 } }
   };
 
   return (

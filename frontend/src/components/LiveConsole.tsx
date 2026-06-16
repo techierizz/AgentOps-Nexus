@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Terminal, Shield, CheckCircle, BrainCircuit } from 'lucide-react';
+import { Terminal, CheckCircle, BrainCircuit } from 'lucide-react';
 import type { LogMessage } from '../types';
 
 interface LiveConsoleProps {
