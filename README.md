@@ -6,6 +6,19 @@ Upload a software project, automatically detect issues, identify root causes, ge
 
 ---
 
+## Important Deployment Update
+
+The deployment link originally submitted with our hackathon application is currently experiencing technical issues due to deployment/environment-related constraints.
+
+To ensure uninterrupted access to the project, we have redeployed AgentOps Nexus to a new production endpoint:
+
+**Updated Live Demo:**
+https://agent-ops-nexus.vercel.app/
+
+We kindly request evaluators to use the above link for project assessment and demonstration.
+
+---
+
 ## 🌟 Overview
 
 AgentOps Nexus is a next-generation software analysis platform that combines:
